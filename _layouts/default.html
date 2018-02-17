@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/index.ico">
+    <title>Watermark Project</title>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="header">
+        <a href="{{ site.baseurl }}/"><img id="logo" src="{{ site.baseurl }}/assets/wire_logo.png" alt="Cornell WIRE logo"></a>
+        <img id="rembrandt" src="{{ site.baseurl }}/assets/rembrandt_header.png" alt="Rembrandt header">
+      </div>
+      <div class="menu">
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/about.html">About</a>
+        <a href="{{ site.baseurl }}/team.html">Project Team</a>
+        <a href="{{ site.baseurl }}/resources.html">Resources</a>
+      </div>
+      <div class="main">
+        {{ content }}
+      </div>
+      <div class="footer">
+        Herbert F. Johnson Museum of Art, Cornell University
+      </div>
+    </div>
+  </body>
+</html>

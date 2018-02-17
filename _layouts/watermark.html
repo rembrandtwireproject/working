@@ -1,0 +1,24 @@
+---
+layout: branch
+---
+
+{% assign slug = page.path | split: "/" | last | split: "." | first %}
+
+<h3>Your watermark is {{ page.name }}</h3>
+<p>{{ page.clarification }}</p>
+<p>________________________________________________________________________</p>
+<p>This watermark can be found on the following print(s):</p>
+<ul>
+  {% for prnt in page.prints %}
+  <li>
+    <i>{{ prnt.title }}</i>, {{ prnt.details }}.
+    {% if prnt.notes %}
+      <p><strong>NOTE:</strong> {{ prnt.notes }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% if page.hinterding %}
+<p>(Erik Hinterding, <i>Rembrandt as an Etcher</i>, 2006, II, {{ page.hinterding }})</p>
+{% endif %}
+<img src="images/{{ slug }}.png" alt="{{ slug }}">

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="main">
+  <h3>Select a watermark type to explore.</h3>
+  <div class="imagegrid">
+    {% for branch in site.data.branches %}
+      <figure>
+        <a href="{{ site.baseurl }}/{{ branch[0] }}/index.html">
+          <img src="{{ site.baseurl }}/{{ branch[0] }}/images/{{ branch[1].image }}.png">
+        </a>
+        <figcaption>{{ branch[1].name }}</figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+</div>

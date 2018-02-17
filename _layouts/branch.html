@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% assign url_elts = page.path | split: "/" %}
+{% assign branch_pos = url_elts | size | minus: 2 %}
+{% assign branch_slug = url_elts[branch_pos] %}
+{% assign branch_name = site.data.branches[branch_slug].name %}
+{% assign slug = page.path | split: "/" | last | split: "." | first %}
+
+<div class="split">
+  <div class="left">
+    <h3>User's image to be matched</h3>
+  </div>
+  <div class="right">
+    <h3>{{ branch_name }}</h3>
+    <a class="button" href="diagram.html">See branch diagram</a>
+    <br>
+    <a class="button" href="{{ page.parent }}.html">↩ Back one step</a>
+    <a class="button" href="index.html">↻ Restart this branch</a>
+    {{ content }}
+  </div>
+</div>
+<script>
+  sessionStorage.last = "{{ slug }}";
+  const image = sessionStorage.image;
+  const elem = document.createElement("img");
+  elem.setAttribute("src", image);
+  const left = document.getElementsByClassName("left")[0];
+  left.appendChild(elem);
+</script>

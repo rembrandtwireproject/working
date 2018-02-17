@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% assign url_elts = page.path | split: "/" %}
+{% assign branch_pos = url_elts | size | minus: 2 %}
+{% assign branch_slug = url_elts[branch_pos] %}
+{% assign branch_name = site.data.branches[branch_slug].name %}
+
+<div class="text">
+  <h3>{{ branch_name }} — Demo</h3>
+  <p>Before running through the {{ branch_name }} branch, choose a comparative watermark to classify.</p>
+  <p>You will then answer questions about your choice of watermark, as you run through the branch to find its subvariant classification.</p>
+</div>
+<div class="imagegrid">
+  {% for demo in page.demos %}
+    <figure>
+      <img onclick=init("images/{{ demo }}.png") src="images/{{ demo }}.png">
+      <figcaption>Option {{ forloop.index }}.</figcaption>
+    </figure>
+  {% endfor %}
+
+  <a class="button" href="../start/index.html">↻ Choose another watermark type</a>
+
+</div>
+<script>
+  function init(image) {
+    sessionStorage.image = image;
+    window.location.href = "{{ page.start }}.html";
+  }
+</script>

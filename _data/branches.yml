@@ -5,3 +5,7 @@ basel_crosier:
 single_headed_eagle:
   name: Single-Headed Eagle
   image: single_headed_eagle
+
+foolscap_5_pointed_collar:
+  name: Foolscap 5 Pointed Colllar
+  image: option_a

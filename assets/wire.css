@@ -88,7 +88,6 @@ body {
 }
 
 .lighttext::after {
-  background-color: black;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -160,6 +159,6 @@ body {
 }
 
 .left img, .right img {
-  max-height: 500px;
-  max-width: 500px;
+  max-height: 400px;
+  max-width: 400px;
 }

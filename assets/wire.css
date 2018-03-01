@@ -82,20 +82,21 @@ body {
 }
 
 .lighttext h2 {
-  font-size: 48pt;
+  font-size: 36pt;
   font-style: italic;
   color: white;
 }
 
 .lighttext::after {
+  background-color: black;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background: url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg') no-repeat center fixed;
-  filter: brightness(20%);
+/*   filter: brightness(30%); */
   content: "";
-  opacity: 0.70;
+  opacity: 0.90;
   position: absolute;
   top: 50px;
   bottom: 0;

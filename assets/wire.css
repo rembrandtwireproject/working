@@ -76,7 +76,7 @@ body {
 
 .lighttext {
   opacity: 1.0;
-  margin:100px;
+  margin:120px;
   text-align: center;
   color: white;
 }
@@ -98,7 +98,7 @@ body {
   content: "";
   opacity: 0.90;
   position: absolute;
-  top: 50px;
+  top: 30px;
   bottom: 0;
   right: 0;
   left: 0;
@@ -160,6 +160,6 @@ body {
 }
 
 .left img, .right img {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 500px;
+  max-width: 500px;
 }

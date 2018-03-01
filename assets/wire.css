@@ -94,7 +94,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background: url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg') no-repeat center fixed;
-/*   filter: brightness(30%); */
+  filter: brightness(30%);
   content: "";
   opacity: 0.90;
   position: absolute;

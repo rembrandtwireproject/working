@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/wire.css">
     <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/index.ico">
     <title>Watermark Project</title>
   </head>
@@ -12,13 +12,28 @@
     <div class="layout">
       <div class="header">
         <a href="{{ site.baseurl }}/"><img id="logo" src="{{ site.baseurl }}/assets/wire_logo.png" alt="Cornell WIRE logo"></a>
-        <img id="rembrandt" src="{{ site.baseurl }}/assets/rembrandt_header.png" alt="Rembrandt header">
       </div>
       <div class="menu">
-        <a href="{{ site.baseurl }}/">Home</a>
-        <a href="{{ site.baseurl }}/about.html">About</a>
-        <a href="{{ site.baseurl }}/team.html">Project Team</a>
-        <a href="{{ site.baseurl }}/resources.html">Resources</a>
+        <a href="{{ site.baseurl }}/"
+          {% if page.path == "_pages/index.html" %}class='selected'{% endif %}
+        >
+          Home
+        </a>
+        <a href="{{ site.baseurl }}/start.html"
+          {% if page.path == "_pages/start.html" %}class='selected'{% endif %}
+        >
+          Decision Tree
+        </a>
+        <a href="{{ site.baseurl }}/about.html"
+          {% if page.path == "_pages/about.html" %}class='selected'{% endif %}
+        >
+          About
+        </a>
+        <a href="{{ site.baseurl }}/team.html"
+          {% if page.path == "_pages/team.html" %}class='selected'{% endif %}
+        >
+          Project Team
+        </a>
       </div>
       <div class="main">
         {{ content }}

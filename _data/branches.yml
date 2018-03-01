@@ -1,11 +1,80 @@
+anchor:
+  name: Anchor
+
 basel_crosier:
   name: Basel Crosier
   image: option_Aaa
 
+basilisk:
+  name: Basilisk
+
+crown:
+  name: Crown
+
+dovecote:
+  name: Dovecote
+
 single_headed_eagle:
-  name: Single-Headed Eagle
+  name: Eagle
   image: single_headed_eagle
 
+fleur_de_lis:
+  name: Fleur-de-lis
+
 foolscap_5_pointed_collar:
-  name: Foolscap 5 Pointed Collar
+  name: Foolscap
   image: option_a
+
+grapes:
+  name: Grapes
+
+hare:
+  name: Hare
+
+horse_and_rider:
+  name: Horse and Rider
+
+kings_head:
+  name: King’s Head
+
+lion:
+  name: Lion
+
+man:
+  name: Man
+
+paschal_lamb:
+  name: Paschal Lamb
+
+phoenix:
+  name: Phoenix
+
+posthorn:
+  name: Posthorn
+
+pot:
+  name: Pot
+
+pro_patria:
+  name: Pro Patria
+
+serpent:
+  name: Serpent
+
+seven_provinces:
+  name: Seven Provinces
+
+star:
+  name: Star
+
+strasbourg_bend:
+  name: Strasbourg Bend
+
+strasbourg_lily:
+  name: Strasbourg Lily
+
+wheel:
+  name: Wheel
+
+words:
+  name: Words

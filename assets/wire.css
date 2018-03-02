@@ -77,14 +77,16 @@ body {
 .lighttext {
   opacity: 1.0;
 /*   margin:120px; */
-  margin: 20%;
+  margin-left:20%;
+  margin-right:20%;
   text-align: center;
   color: white;
 }
 
 .lighttext h2 {
-  font-size: 36pt;
-  margin: 30%;
+  font-size: 30pt;
+  margin-left: 30%;
+  margin-right: 30%;
   font-style: italic;
   color: white;
 }

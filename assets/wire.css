@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: black;
-  padding: 4em;
+  padding: 5em;
 }
 
 #logo {
@@ -54,7 +54,7 @@ body {
   background-color: black;
   color: white;
   margin-top: 1.2em;
-  padding: .5em 1em;
+  padding: 1.5em 1em;
   text-align: center;
 }
 
@@ -118,8 +118,8 @@ body {
 }
 
 .imagegrid img {
-  height: 150px;
-  width: 120px;
+  height: 300px;
+/*   width: 120px; */
 }
 
 .imagegrid figcaption {

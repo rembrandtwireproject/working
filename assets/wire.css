@@ -76,7 +76,6 @@ body {
 
 .lighttext {
   opacity: 1.0;
-/*   margin:120px; */
   margin-left:10%;
   margin-right:10%;
   text-align: center;
@@ -84,11 +83,12 @@ body {
 }
 
 .lighttext h2 {
-  font-size: 30pt;
+  font-size: 34pt;
   margin-left: 10%;
   margin-right: 10%;
   font-style: italic;
   color: white;
+  font-weight: normal;
 }
 
 .lighttext::after {
@@ -109,6 +109,23 @@ body {
 }
 
 .button {
+  background-color: white;
+  box-shadow: 0 .7em .9em 0 rgba(0,0,0,0.24), 0 1em 3em 0 rgba(0,0,0,0.19);
+  color: black;
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  padding: .8em 0;
+  text-align: center;
+  text-decoration: none;
+  width: 12em;
+}
+
+.button:hover {
+  background-color: lightgray;
+}
+
+.buttonDarkBackground {
   background-color: black;
   box-shadow: 0 .7em .9em 0 rgba(0,0,0,0.24), 0 1em 3em 0 rgba(0,0,0,0.19);
   color: white;
@@ -122,8 +139,16 @@ body {
 }
 
 .imagegrid img {
-  height: 500px;
+  height: 150px;
   width: 120px;
+  border-radius: 25px;
+}
+
+.imagegrid img.inactive {
+  height: 150px;
+  width: 120px;
+  border-radius: 25px;
+  opacity: 0.3;
 }
 
 .imagegrid figcaption {
@@ -137,9 +162,6 @@ body {
   margin-top: 0;
   margin-right: 1em;
   margin-bottom: 1em;
-  padding: 10px;
-  border: 2px solid #73AD21;
-  border-radius: 25px;
 }
 
 .imagegrid figure:hover {

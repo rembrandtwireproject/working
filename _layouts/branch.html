@@ -6,6 +6,7 @@ layout: default
 {% assign branch_pos = url_elts | size | minus: 2 %}
 {% assign branch_slug = url_elts[branch_pos] %}
 {% assign branch_name = site.data.branches[branch_slug].name %}
+{% assign diagram = site.data.branches[branch_slug].diagram %}
 {% assign slug = page.path | split: "/" | last | split: "." | first %}
 
 <div class="split">
@@ -16,7 +17,9 @@ layout: default
     <h3>{{ branch_name }}</h3>
     {{ content }}
     <hr/>
-    <a class="button" href="diagram.html">See branch diagram</a>
+    {% if diagram != "disabled" %}
+      <a class="button" href="diagram.html">See branch diagram</a>
+    {% endif %}
     <a class="button" href="{{ page.parent }}.html">↩ Back one step</a>
     <a class="button" href="index.html">↻ Restart this branch</a>
   </div>

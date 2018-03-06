@@ -24,6 +24,7 @@ fleur_de_lis:
 foolscap_5_pointed_collar:
   name: Foolscap
   image: option_a
+  diagram: disabled
 
 grapes:
   name: Grapes

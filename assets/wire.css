@@ -176,15 +176,21 @@ body {
 }
 
 .left {
-  grid-area: 'left';
+  grid-area: left;
+  width: 400px;
 }
 
 .right {
-  grid-area: 'right';
-  position: relative;
+  grid-area: right;
+  width: 600px;
 }
 
 .left img, .right img {
   max-height: 400px;
   max-width: 400px;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 1.17em;
 }

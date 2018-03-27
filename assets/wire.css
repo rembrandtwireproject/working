@@ -24,7 +24,7 @@ body {
   height: 68px;
 }
 
-.menu {
+/* .menu {
   grid-area: menu;
   background-color: white;
   display: flex;
@@ -39,12 +39,34 @@ body {
   text-align: center;
   text-decoration: none;
 }
+ */
 
-.menu a.selected {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top:10;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    margin-left: 12%;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a.selected {
   font-style: italic;
 }
 
-.menu a:hover {
+a:hover {
   color: lightblue;
 }
 

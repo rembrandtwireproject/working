@@ -13,10 +13,9 @@ body {
     'footer';
 }
 
-.header {
-  grid-area: header;
-  display: flex;
-  justify-content: space-between;
+.container-fluid {
+/*   display: flex;
+  justify-content: space-between; */
   background-color: black;
   padding: 5em;
 }

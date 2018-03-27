@@ -15,7 +15,7 @@ layout: default
 <div class="imagegrid">
   {% for demo in page.demos %}
     <figure>
-      <img onclick=init("images/{{ demo }}.png") src="images/{{ demo }}.png">
+      <img onclick=init("images/fixedwidth/{{ demo }}.png") src="images/fixedwidth/{{ demo }}.png">
       <figcaption>Option {{ forloop.index }}.</figcaption>
     </figure>
   {% endfor %}

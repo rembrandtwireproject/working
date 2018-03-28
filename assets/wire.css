@@ -75,7 +75,7 @@ a:hover {
   margin: 5%;
 }
 
-.footer {
+.container-fluid footer{
     font-color: white;
     font-family:'Crimson Text', serif;
     text-align: center;

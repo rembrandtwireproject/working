@@ -79,6 +79,7 @@ a:hover {
   background: url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg') no-repeat center fixed;
   filter: brightness(30%);
   opacity: 0.9;
+  position: absolute;
   top: 30px;
   bottom: 0;
   right: 0;
@@ -95,6 +96,7 @@ a:hover {
 }
 
 .text_index {
+  position: absolute;
   opacity: 1;
   color: white;
   text-align:center;

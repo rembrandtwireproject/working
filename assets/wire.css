@@ -94,6 +94,7 @@ container-index {
 }
 
 text_index{
+  clear: both;
   opacity: 1;
   color; white;
   text-align:center;

@@ -75,14 +75,14 @@ a:hover {
   margin: 5%;
 }
 
-.container-fluid footer{
+.footer{
     font-color: white;
     font-family:'Crimson Text', serif;
     text-align: center;
     bottom: 0;
 }
 
-.btn btn-primary {
+.btn {
   background-color: black;
   margin-top: 5%;
   margin-bottom: 5%;

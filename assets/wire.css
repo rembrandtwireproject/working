@@ -55,9 +55,10 @@ a:hover {
 
 .container-index {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
-  url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg');
+  url("../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg");
   background-size: cover;
   display:block;
+  background-size:100%;
   background-repeat:no-repeat;
   height: 150hv;
   font-family: 'Crimson Text', serif;

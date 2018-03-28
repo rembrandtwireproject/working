@@ -1,5 +1,5 @@
 body {
-  font-family: 'Garamond', 'Georgia', 'Arial', sans-serif;
+  font-family: 'Crimson Text', serif;
   margin: 0 auto;
   padding: .5em 1em;
 }
@@ -14,8 +14,6 @@ body {
 }
 
 .container-fluid {
-/*   display: flex;
-  justify-content: space-between; */
   background-color: black;
   padding: 5em;
 }
@@ -24,26 +22,10 @@ body {
   height: 68px;
 }
 
-/* .menu {
-  grid-area: menu;
-  background-color: white;
-  display: flex;
-}
-
-.menu a {
-  flex: 1 1 auto;
-  color: black;
-  float: left;
-  font-size: 110%;
-  padding: .5em 5em;
-  text-align: center;
-  text-decoration: none;
-}
- */
-
 ul {
+    family-font: 'Crimson Text', serif;
     list-style-type: none;
-    margin: 0;
+    margin: 10;
     padding: 0;
     padding-top:10;
     overflow: hidden;
@@ -68,15 +50,6 @@ a.selected {
 
 a:hover {
   color: lightblue;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: black;
-  color: white;
-  margin-top: 1.2em;
-  padding: 1.5em 1em;
-  text-align: center;
 }
 
 .main {
@@ -140,6 +113,7 @@ a:hover {
   text-align: center;
   text-decoration: none;
   width: 12em;
+  font-family: 'Crimson Text', serif;
 }
 
 .button:hover {

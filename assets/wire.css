@@ -4,14 +4,6 @@ body {
   padding: .5em 1em;
 }
 
-/* .layout {
-  display: grid;
-  grid-template-areas:
-    'header'
-    'menu'
-    'main'
-    'footer';
-} */
 
 .container-fluid {
   background-color: black;
@@ -33,6 +25,7 @@ ul {
 
 li {
     float: left;
+    font-family: 'Crimson Text', serif;
     margin-left: 12%;
 }
 
@@ -40,8 +33,6 @@ li a {
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
 }
 
 a.selected {
@@ -80,107 +71,3 @@ a:hover {
   font-weight: normal;
 }
 
-.container::after {
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background: url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg') no-repeat center fixed;
-  filter: brightness(30%);
-  content: "";
-  opacity: 0.90;
-  position: absolute;
-  top: 30px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.button {
-  background-color: white;
-  box-shadow: 0 .7em .9em 0 rgba(0,0,0,0.24), 0 1em 3em 0 rgba(0,0,0,0.19);
-  color: black;
-  display: inline-block;
-  margin-bottom: 1em;
-  margin-right: 1em;
-  padding: .8em 0;
-  text-align: center;
-  text-decoration: none;
-  width: 12em;
-  font-family: 'Crimson Text', serif;
-}
-
-.button:hover {
-  background-color: lightgray;
-}
-
-.buttonDarkBackground {
-  background-color: black;
-  box-shadow: 0 .7em .9em 0 rgba(0,0,0,0.24), 0 1em 3em 0 rgba(0,0,0,0.19);
-  color: white;
-  display: inline-block;
-  margin-bottom: 1em;
-  margin-right: 1em;
-  padding: .8em 0;
-  text-align: center;
-  text-decoration: none;
-  width: 12em;
-}
-
-.imagegrid img {
-  height: 150px;
-  width: 120px;
-  border-radius: 25px;
-}
-
-.imagegrid img.inactive {
-  height: 150px;
-  width: 120px;
-  border-radius: 25px;
-  opacity: 0.5;
-}
-
-.imagegrid figcaption {
-  text-align: center;
-}
-
-.imagegrid figure {
-  display: block;
-  float: left;
-  margin-left: 0;
-  margin-top: 0;
-  margin-right: 1em;
-  margin-bottom: 1em;
-}
-
-.imagegrid figure:hover {
-  cursor: pointer;
-}
-
-.split {
-  display: grid;
-  grid-template-areas:
-    'left right';
-  grid-column-gap: 50px;
-}
-
-.left {
-  grid-area: left;
-  width: 400px;
-}
-
-.right {
-  grid-area: right;
-  width: 600px;
-}
-
-.left img, .right img {
-  max-height: 400px;
-  max-width: 400px;
-}
-
-.question {
-  font-weight: bold;
-  font-size: 1.17em;
-}

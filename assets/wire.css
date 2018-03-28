@@ -87,3 +87,10 @@ a:hover {
   left: 0;
   z-index: -1;
 }
+
+container-index {
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+  color: white;
+  padding: 2%;
+}

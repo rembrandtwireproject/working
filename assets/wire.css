@@ -57,6 +57,9 @@ a:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
   url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg');
   background-size: cover;
+  display:block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
   height: 150hv;
   font-family: 'Crimson Text', serif;
   text-align: center;

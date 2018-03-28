@@ -80,12 +80,10 @@ a:hover {
   filter: brightness(30%);
   content: "";
   opacity: 0.90;
-  position: absolute;
   top: 30px;
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: -1;
 }
 
 container-index {

@@ -97,12 +97,14 @@ a:hover {
 }
 
 .buttonDarkBackground{
-  background-color: black;
-  padding: 5%;
+  background-color: #e7e7e7;
   margin-top: 5%;
   margin-bottom: 5%;
   text-decoration: none;
   border-radius: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
 }
 
 

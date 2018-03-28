@@ -4,7 +4,7 @@ body {
   padding: .5em 1em;
 }
 
-nav{
+nav {
   margin-top:1%;
   margin-bottom: 1%;
 }
@@ -89,7 +89,7 @@ a:hover {
     bottom: 0;
 }
 
-.btn btn-primary{
+.btn btn-primary {
   background-color: black;
   margin-top: 5%;
   margin-bottom: 5%;

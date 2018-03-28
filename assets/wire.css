@@ -93,6 +93,12 @@ container-index {
   padding: 2%;
 }
 
+text_index{
+  opacity: 1;
+  color; white;
+  text-align:center;
+}
+
 footer{
     bottom: 0;
 }

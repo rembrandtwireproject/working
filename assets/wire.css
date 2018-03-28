@@ -66,10 +66,7 @@ a:hover {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-  url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg'), center, no-repeat, fixed;
   background-size: cover;
   height: 150hv;
 }

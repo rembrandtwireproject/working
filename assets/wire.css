@@ -92,3 +92,7 @@ container-index {
   color: white;
   padding: 2%;
 }
+
+footer{
+    bottom: 0;
+}

@@ -52,11 +52,6 @@ a:hover {
   color: lightblue;
 }
 
-.main {
-  grid-area: main;
-  padding: .8em;
-}
-
 .text {
   opacity: 1.0;
   margin:100px;
@@ -68,7 +63,7 @@ a:hover {
   font-style: italic;
 }
 
-.lighttext {
+.container {
   opacity: 1.0;
   margin-left:10%;
   margin-right:10%;
@@ -76,7 +71,7 @@ a:hover {
   color: white;
 }
 
-.lighttext h2 {
+.container h2 {
   font-size: 34pt;
   margin-left: 10%;
   margin-right: 10%;
@@ -85,7 +80,7 @@ a:hover {
   font-weight: normal;
 }
 
-.lighttext::after {
+.container::after {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

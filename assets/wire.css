@@ -60,6 +60,8 @@ a:hover {
   margin-right:10%;
   text-align: center;
   color: white;
+  position: relative;
+  text-align: center;
 }
 
 .container-index h2 {
@@ -92,7 +94,6 @@ a:hover {
   color: white;
   opacity: 1;
   padding: 2%;
-  margin:5%
 }
 
 .text_index {
@@ -109,6 +110,6 @@ a:hover {
 .footer {
     text-align: center;
     bottom: 0;
-    font-color:white;
+    font-color: white;
     font-family:'Crimson Text', serif;
 }

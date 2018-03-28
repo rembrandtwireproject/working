@@ -73,6 +73,7 @@ a:hover {
   color: white;
   text-align:center;
   margin: 5%;
+  font-style: normal;
 }
 
 .container-fluid.footer{

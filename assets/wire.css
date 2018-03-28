@@ -56,17 +56,17 @@ a:hover {
 }
 
 .container-index {
-   background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background: url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg') no-repeat center fixed;
-  filter: brightness(30%);
-  opacity: 0.9;
-  top: 30px;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+  url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg');
+  background-size: cover;
+/*   top: 30px;
   bottom: 0;
   right: 0;
-  left: 0;
+  left: 0; */
 }
 
 .container-index {
@@ -81,6 +81,7 @@ a:hover {
   opacity: 1;
   color: white;
   text-align:center;
+  margin: 5%;
 }
 
 .footer {

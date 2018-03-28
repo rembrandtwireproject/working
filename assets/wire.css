@@ -71,7 +71,7 @@ a:hover {
   font-weight: normal;
 }
 
-.container-index {
+/* .container-index {
    background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -85,7 +85,7 @@ a:hover {
   right: 0;
   left: 0;
 }
-
+ */
 .container-index {
   font-family: 'Crimson Text', serif;
   text-align: center;

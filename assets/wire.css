@@ -89,6 +89,7 @@ container-index {
   text-align: center;
   color: white;
   padding: 2%;
+  margin:5%
 }
 
 text_index{
@@ -99,5 +100,8 @@ text_index{
 }
 
 footer{
+    text-align: center;
     bottom: 0;
+    font-color:white;
+    font-family:'Crimson Text', serif;
 }

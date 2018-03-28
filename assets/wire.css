@@ -93,10 +93,11 @@ a:hover {
 
 .buttonDarkBackground{
   background-color: black;
-  padding: 2%;
+  padding: 5%;
   margin-top: 5%;
   margin-bottom: 5%;
   text-decoration: none;
+  border-radius: 8px;
 }
 
 

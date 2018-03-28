@@ -94,13 +94,12 @@ a:hover {
 }
 
 .text_index {
-  clear: both;
   opacity: 1;
   color; white;
   text-align:center;
 }
 
-.footer {
+.container-fluid.footer {
     text-align: center;
     bottom: 0;
     font-color:white;

@@ -11,10 +11,10 @@
     <title>Watermark Project</title>
   </head>
   <body>
-    <div class="layout">
       <div class="container-fluid">
         <a href="{{ site.baseurl }}/"><img id="logo" src="{{ site.baseurl }}/assets/wire_logo.png" alt="Cornell WIRE logo"></a>
-      </div>
+    </div>
+    <div class="container-fluid">
       <ul class="nav justify-content-center">
         <li class="nav-item">   <a href="{{ site.baseurl }}/"
           {% if page.path == "_pages/index.html" %}class='selected'{% endif %}> Home</a></li>
@@ -28,6 +28,7 @@
           {% if page.path == "_pages/team.html" %}class='selected'{% endif %}
         > Project Team</a></li>
       </ul>
+    </div>
       <div class="main">
         {{ content }}
       </div>

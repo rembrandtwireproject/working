@@ -89,6 +89,7 @@ a:hover {
   font-family: 'Crimson Text', serif;
   text-align: center;
   color: white;
+  opacity: 1;
   padding: 2%;
   margin:5%
 }
@@ -99,7 +100,7 @@ a:hover {
   text-align:center;
 }
 
-.container-fluid.footer {
+.footer {
     text-align: center;
     bottom: 0;
     font-color:white;

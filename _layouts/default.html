@@ -14,7 +14,7 @@
       <div class="container-fluid">
         <a href="{{ site.baseurl }}/"><img id="logo" src="{{ site.baseurl }}/assets/wire_logo.png" alt="Cornell WIRE logo"> </a>
     </div>
-    <div class='nav'>
+    <nav>
       <ul class="nav justify-content-center">
         <li class="nav-item">   <a href="{{ site.baseurl }}/"
           {% if page.path == "_pages/index.html" %}class='selected'{% endif %}> Home</a></li>
@@ -28,7 +28,7 @@
           {% if page.path == "_pages/team.html" %}class='selected'{% endif %}
         > Project Team</a></li>
       </ul>
-    </div>
+    </nav>
         {{ content }}
       <div class= "container-fluid footer">
         <p>Herbert F. Johnson Museum of Art, Cornell University</p>

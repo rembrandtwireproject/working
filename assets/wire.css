@@ -56,6 +56,7 @@ a:hover {
 }
 
 .container-index {
+  margin-top: 5%;
     background-image: 
     linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -92,7 +93,7 @@ a:hover {
 }
 
 .buttonDarkBackground{
-  background-color: black;
+  color: black;
   padding: 5%;
   margin-top: 5%;
   margin-bottom: 5%;

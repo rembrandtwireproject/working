@@ -90,3 +90,8 @@ a:hover {
     text-align: center;
     bottom: 0;
 }
+
+.buttonDarkBackground{
+  background-color: black;
+  padding: 2%;
+}

@@ -78,8 +78,6 @@ a:hover {
   -o-background-size: cover;
   background: url('../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg') no-repeat center fixed;
   filter: brightness(30%);
-  content: "";
-  opacity: 0.90;
   top: 30px;
   bottom: 0;
   right: 0;

@@ -3,23 +3,26 @@ layout: default
 ---
 
 <script src="{{ site.baseurl }}/assets/mm.js"></script>
-
 <div class="text">
   <h2>Identify your watermark</h2>
   <p>
     Each watermark has many different variants and subvariants - there are some watermarks that are so similar that they are twins. The diagram above is an example of the various variants and subvariants for one watermark.
 Answer the following yes / no questions and establish exactly what watermark is on your print. Below are various watermarks…select one to start.
   </p>
-  <div class="imagegrid">
+  <div class="container">
     {% for branch in site.data.branches %}
       <figure>
         {% if branch[1].image %}
+         <div class="row"> 
           <a href="{{ site.baseurl }}/{{ branch[0] }}/index.html">
-            <img src="{{ site.baseurl }}/{{ branch[0] }}/images/{{ branch[1].image }}.png" class="active">
-          </a>
+           <img src="{{ site.baseurl }}/{{ branch[0] }}/images/{{ branch[1].image }}.png" class="active">
+           </a>
+        </div>
         {% else %}
+        <div class="row"> 
           <img src="{{ site.baseurl }}/assets/placeholder.png" class="inactive">
         {% endif %}
+        </div>
         <figcaption>{{ branch[1].name }}</figcaption>
       </figure>
     {% endfor %}

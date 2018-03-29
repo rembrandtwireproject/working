@@ -15,17 +15,17 @@ Answer the following yes / no questions and establish exactly what watermark is 
         {% if branch[1].image %}
          <div class="row"> 
             <div class="col-sm">
-          <a href="{{ site.baseurl }}/{{ branch[0] }}/index.html">
-           <img src="{{ site.baseurl }}/{{ branch[0] }}/images/{{ branch[1].image }}.png" class="active">
-           </a>
-        </div>
-       </div>
+              <a href="{{ site.baseurl }}/{{ branch[0] }}/index.html">
+              <img src="{{ site.baseurl }}/{{ branch[0] }}/images/{{ branch[1].image }}.png" class="active">
+              </a>
+            </div>
+          </div>
         {% else %}
         <div class="row"> 
           <div class="col-sm">
           <img src="{{ site.baseurl }}/assets/placeholder.png" class="inactive">
-        {% endif %}
-        </div>
+            {% endif %}
+          </div>
         </div>
         <figcaption>{{ branch[1].name }}</figcaption>
       </figure>

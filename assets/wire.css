@@ -96,3 +96,11 @@ a:hover {
   text-align: center;
   display: inline-block;
 }
+
+.container img.inactive {
+  height: 150px;
+  width: 120px;
+  border-radius: 25px;
+  opacity: 0.5;
+}
+

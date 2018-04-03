@@ -9,26 +9,20 @@ layout: default
     Each watermark has many different variants and subvariants - there are some watermarks that are so similar that they are twins. The diagram above is an example of the various variants and subvariants for one watermark.
 Answer the following yes / no questions and establish exactly what watermark is on your print. Below are various watermarks…select one to start.
   </p>
-  <div class="container">
+  <div class="d-flex flex-row flex-wrap">
     {% for branch in site.data.branches %}
-      <figure>
-        {% if branch[1].image %}
-         <div class="row"> 
-            <div class="col-sm">
-              <a href="{{ site.baseurl }}/{{ branch[0] }}/index.html">
+      <div class="p-2 watermarkButton">
+        <figure>
+          {% if branch[1].image %}
+            <a href="{{ site.baseurl }}/{{ branch[0] }}/index.html">
               <img src="{{ site.baseurl }}/{{ branch[0] }}/images/{{ branch[1].image }}.png" class="active">
-              </a>
-            </div>
-          </div>
-        {% else %}
-        <div class="row"> 
-          <div class="col-sm">
-          <img src="{{ site.baseurl }}/assets/placeholder.png" class="inactive">
-            {% endif %}
-          </div>
-        </div>
-        <figcaption>{{ branch[1].name }}</figcaption>
-      </figure>
+            </a>
+          {% else %}
+            <img src="{{ site.baseurl }}/assets/placeholder.png" class="inactive">
+          {% endif %}
+          <figcaption>{{ branch[1].name }}</figcaption>
+        </figure>
+      </div>
     {% endfor %}
   </div>
 </div>

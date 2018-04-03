@@ -18,32 +18,33 @@ nav {
   height: 68px;
 }
 
-ul {
-    family-font: 'Crimson Text', serif;
-    list-style-type: none;
-    margin: 10;
-    padding: 0;
-    padding-top:10;
-    overflow: hidden;
+.nav ul {
+  family-font: 'Crimson Text', serif;
+  list-style-type: none;
+  margin: 10;
+  padding: 0;
+  padding-top:10;
+  overflow: hidden;
 }
 
-li {
-    float: left;
-    font-family: 'Crimson Text', serif;
-    margin-left: 12%;
+.nav li {
+  float: left;
+  font-family: 'Crimson Text', serif;
+  margin-left: 6%;
+  margin-right: 6%;
 }
 
-li a {
-    display: block;
-    color: black;
-    text-align: center;
+.nav li a {
+  display: block;
+  color: black;
+  text-align: center;
 }
 
-a.selected {
+.nav a.selected {
   font-style: italic;
 }
 
-a:hover {
+.nav a:hover {
   color: lightblue;
 }
 
@@ -76,12 +77,12 @@ a:hover {
   font-style: normal;
 }
 
-.container-fluid.footer{
-    padding: 2%;
-    font-color: white;
-    font-family:'Crimson Text', serif;
-    text-align: center;
-    bottom: 0;
+.container-fluid.footer {
+  padding: 2%;
+  font-color: white;
+  font-family:'Crimson Text', serif;
+  text-align: center;
+  bottom: 0;
 }
 
 .btn.btn-primary {
@@ -92,15 +93,53 @@ a:hover {
   margin-bottom: 5%;
   text-decoration: none;
   padding: 30px;
-  border-radius: 50%;
   text-align: center;
   display: inline-block;
 }
 
-.container img.inactive {
+.button {
+  background-color: white;
+  box-shadow: 0 .7em .9em 0 rgba(0,0,0,0.24), 0 1em 3em 0 rgba(0,0,0,0.19);
+  color: black;
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  padding: .8em 0;
+  text-align: center;
+  text-decoration: none;
+  width: 12em;
+}
+
+.button:hover {
+  background-color: lightgray;
+}
+
+.watermarkButton figure {
+  display: block;
+  float: left;
+  margin-left: 0.5em;
+  margin-top: 0;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+}
+
+.watermarkButton figure:hover {
+  cursor: pointer;
+}
+
+.watermarkButton figcaption {
+  text-align: center;
+}
+
+.watermarkButton img {
+  height: 150px;
+  width: 120px;
+  border-radius: 25px;
+}
+
+.watermarkButton img.inactive {
   height: 150px;
   width: 120px;
   border-radius: 25px;
   opacity: 0.5;
 }
-

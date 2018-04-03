@@ -9,19 +9,21 @@ layout: default
 {% assign diagram = site.data.branches[branch_slug].diagram %}
 {% assign slug = page.path | split: "/" | last | split: "." | first %}
 
-<div class="split">
-  <div class="left">
-    <h3>User's image to be matched</h3>
-  </div>
-  <div class="right">
-    <p class="question">{{ branch_name }}</p>
-    {{ content }}
-    <hr/>
-    {% if diagram != "disabled" %}
-      <a class="button" href="diagram.html">See branch diagram</a>
-    {% endif %}
-    <a class="button" href="{{ page.parent }}.html">↩ Back one step</a>
-    <a class="button" href="index.html">↻ Restart this branch</a>
+<div class="container">
+  <div class="row">
+    <div class="col-6 left">
+      <h3>User's image to be matched</h3>
+    </div>
+    <div class="col-6 right">
+      <h2>{{ branch_name }}</h2>
+      {{ content }}
+      <hr/>
+      {% if diagram != "disabled" %}
+        <a class="button" href="diagram.html">See branch diagram</a>
+      {% endif %}
+      <a class="button" href="{{ page.parent }}.html">↩ Back one step</a>
+      <a class="button" href="index.html">↻ Restart this branch</a>
+    </div>
   </div>
 </div>
 <script>

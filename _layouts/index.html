@@ -8,9 +8,9 @@ layout: default
 {% assign branch_name = site.data.branches[branch_slug].name %}
 
 <div class="text">
-  <h3>{{ branch_name }} — Demo</h3>
-  <p>Before running through the {{ branch_name }} branch, choose a comparative watermark to classify.</p>
-  <p>You will then answer questions about your choice of watermark, as you run through the branch to find its subvariant classification.</p>
+  <h2>{{ branch_name }} — Demo</h2>
+  <p>Choose a comparative watermark image to classify using the {{ branch_name }} Decision Branch.</p>
+  <p>Answer the questions provided to determine a match.</p>
 
   <div class="d-flex flex-row flex-wrap">
     {% for demo in page.demos %}

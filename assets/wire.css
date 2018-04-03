@@ -54,6 +54,10 @@ nav {
   text-align: center;
 }
 
+h2 {
+  font-size: 48pt;
+}
+
 .container-index {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
   url("../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg");
@@ -91,7 +95,7 @@ nav {
   background-color: black;
   margin-top: 5%;
   margin-bottom: 5%;
-  text-decoration: none;
+  font-style: normal;
   padding: 30px;
   text-align: center;
   display: inline-block;

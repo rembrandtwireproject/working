@@ -22,7 +22,7 @@ fleur_de_lis:
   name: Fleur-de-lis
 
 foolscap_5_pointed_collar:
-  name: Foolscap
+  name: Foolscap with<br/>Five-Pointed Collar
   image: option_a
   diagram: disabled
 

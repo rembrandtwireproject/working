@@ -65,6 +65,10 @@ serpent:
 seven_provinces:
   name: Seven Provinces
 
+Small_Crosses:
+  name: Small Crosses
+  image: CrossesA.a.b
+
 star:
   name: Star
 

@@ -41,6 +41,10 @@ kings_head:
 lion:
   name: Lion
 
+Lorraine_Cross:
+  name: Lorraine Crosses
+  image: LorraineA.a.b
+
 man:
   name: Man
 

@@ -8,6 +8,10 @@ basel_crosier:
 basilisk:
   name: Basilisk
 
+countermark_f:
+  name: Countermark F
+  image: Q5
+
 crown:
   name: Crown
 

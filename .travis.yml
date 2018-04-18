@@ -1,4 +1,6 @@
-addons:
-  apt:
-    packages:
-    - imagemagick
+# This skips any bundle install, which Travis will try to do because it sees a Gemfile
+install: true
+
+script:
+  - find _pages -name "images" -exec ./mk_fixedwidth.sh {} \;
+  - git status

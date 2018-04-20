@@ -2,8 +2,8 @@ anchor:
   name: Anchor
 
 arms_of_bern:
-    name: Arms of Bern
-    image: first_image
+  name: Arms of Bern
+  image: first_image
 
 basel_crosier:
   name: Basel Crosier

@@ -12,6 +12,10 @@ countermark_f:
   name: Countermark 'F'
   image: option_d
 
+countermark_l:
+  name: Countermark 'L'
+  image: cntr_l_example
+
 crown:
   name: Crown
 

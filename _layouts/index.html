@@ -16,7 +16,7 @@ layout: default
     {% for demo in page.demos %}
       <div class="p-2 watermarkButton">
         <figure>
-          <img onclick=init("images/fixedwidth/{{ demo }}.png") src="images/fixedwidth/{{ demo }}.png">
+          <img onclick=init("images/{{ demo }}.png") src="images/{{ demo }}.png">
           <figcaption>Option {{ forloop.index }}.</figcaption>
         </figure>
       </div>

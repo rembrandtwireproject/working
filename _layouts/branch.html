@@ -31,6 +31,8 @@ layout: default
   const image = sessionStorage.image;
   const elem = document.createElement("img");
   elem.setAttribute("src", image);
+  // This is temporary until we can use fixedwidth images
+  elem.setAttribute("width", "400px");
   const left = document.getElementsByClassName("left")[0];
   left.appendChild(elem);
 </script>

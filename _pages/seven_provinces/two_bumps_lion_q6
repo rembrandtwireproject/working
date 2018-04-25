@@ -1,0 +1,7 @@
+---
+layout: question
+question: Is the 'F' followed by a 'C'?
+parent: bm_q5
+if-yes: A'.a.a
+if-no: A'.a.b
+---

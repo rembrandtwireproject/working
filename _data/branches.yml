@@ -81,6 +81,7 @@ serpent:
 
 seven_provinces:
   name: Seven Provinces
+  image: option_a
 
 Small_Crosses:
   name: Small Crosses

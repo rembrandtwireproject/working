@@ -1,27 +1,92 @@
 ---
-layout: branch
+layout: branch2
 ---
 
 {% assign slug = page.path | split: "/" | last | split: "." | pop | join: "." %}
 
-<h3>Your watermark is {{ page.name }}</h3>
-<p>{{ page.clarification }}</p>
-<p>________________________________________________________________________</p>
-{% if page.datable %}
-  <p><strong>This paper is datable to {{ page.datable }}</strong>.</p>
-{% endif %}
-<p>This watermark can be found on the following print(s):</p>
-<ul>
-  {% for prnt in page.prints %}
-  <li>
-    <i>{{ prnt.title }}</i>, {{ prnt.details }}.
-    {% if prnt.notes %}
-      <p><strong>NOTE:</strong> {{ prnt.notes }}</p>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
-{% if page.hinterding %}
-<p>(Erik Hinterding, <i>Rembrandt as an Etcher</i>, 2006, II, {{ page.hinterding }})</p>
-{% endif %}
-<img src="images/{{ slug }}.png" alt="{{ slug }}"  style="width:400px">
+
+<center>
+  <table style="margin-top: -20px">
+    <tr>
+      <td colspan="2">
+        <svg width="530" height="100" xmlns="http://www.w3.org/2000/svg">
+          <line
+            stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1"
+            y1="-10" x1="10" y2="110" x2="60"
+            stroke-width="20" stroke="#000" fill="none"
+          />
+        </svg>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="end-result">
+          <span class="end-result-prefix">Your watermark is</span>
+          {{ page.name }}
+        </div>
+      </td>
+
+      <td>
+        <svg width="230" height="300" xmlns="http://www.w3.org/2000/svg">
+          <line stroke-linecap="undefined" stroke-linejoin="undefined" stroke-dasharray="5,5" id="svg_2"
+            y2="35" x2="180.5" y1="82" x1="0.5"
+            stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none"/>
+          <ellipse ry="8" rx="8" id="svg_4" cy="22.5" cx="203"
+            stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none"/>
+        </svg>
+      </td>
+    </tr>
+  </table>
+</center>
+
+<br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+
+    <div class="col-md-3">
+      <img src="images/{{ slug }}.png" alt="{{ slug }}" class="end-result-image">
+    </div>
+
+    <div class="col-md-4 end-result-explanation" >
+      {{ page.clarification }}
+      {% if page.datable %}
+        This paper is datable to {{ page.datable }}.
+      {% endif %}
+    </div>
+
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<br><br>
+
+<div class="end-result-examples-prefix">
+  The watermark can be found on the following print(s):
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+      <ul>
+        {% for prnt in page.prints %}
+        <li>
+          <i>{{ prnt.title }}</i>, {{ prnt.details }}.
+          {% if prnt.notes %}
+            <p><strong>NOTE:</strong> {{ prnt.notes }}</p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% if page.hinterding %}
+        <p>(Erik Hinterding, <i>Rembrandt as an Etcher</i>, 2006, II, {{ page.hinterding }})</p>
+      {% endif %}
+    </div>
+
+    <div class="col-md-2"></div>
+  </div>
+</div>

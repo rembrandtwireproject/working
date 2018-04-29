@@ -1,9 +1,14 @@
 TODO:
 
 - Yellow border around images on hover.
-- #ffb30d is the color of yellow
+- Watermark: black line does not reach yellow border of end type
+- Watermark: "Your watermark is:" should appear at the top, not the left side
+- Watermark: Type occasionally spills over the circle border (e.g. Foolscap)
 
 FUTURE:
 
 - Make user image draggable, movable around screen.  It needs to be doable on a tablet as well.  Interesting.
--
+- Coarse Editor: rotate by manual degree
+- Coarse Editor: remove arrow buttons, which are not useful.
+- Fine Editor: Reverse b/w, color -> greyscale
+- Watermark: Haven't decided on whether actual prints will appear, and how they will be referenced

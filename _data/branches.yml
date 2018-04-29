@@ -102,6 +102,6 @@ wheel:
 words:
   name: Words
 
-  Countermark_N:
+Countermark_N:
     name: Countermark 'N'
     image: Countermark_N_option_a

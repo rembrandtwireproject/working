@@ -20,6 +20,10 @@ countermark_l:
   name: Countermark 'L'
   image: cntr_l_example
 
+Countermark_N:
+  name: Countermark 'N'
+  image: Countermark_N_option_a
+
 crown:
   name: Crown
 
@@ -101,7 +105,4 @@ wheel:
 
 words:
   name: Words
-
-Countermark_N:
-    name: Countermark 'N'
-    image: Countermark_N_option_a
+  

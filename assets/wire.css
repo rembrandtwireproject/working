@@ -110,6 +110,26 @@ h2 {
   background-color: lightgray;
 }
 
+.round-button {
+  display:flex;
+  width:180px;
+  height:180px;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: black;
+  text-align:center;
+  align-items: center;
+  background: #FFB30D;;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.round-button:hover {
+  border: 3px solid #FFB30D;
+  color: black;
+  text-decoration: none;
+}
+
 .watermarkButton figure {
   display: block;
   float: left;

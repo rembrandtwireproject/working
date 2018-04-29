@@ -2,7 +2,7 @@
 layout: branch
 ---
 
-{% assign slug = page.path | split: "/" | last | split: "." | first %}
+{% assign slug = page.path | split: "/" | last | split: "." | pop | join: "." %}
 
 <h3>Your watermark is {{ page.name }}</h3>
 <p>{{ page.clarification }}</p>

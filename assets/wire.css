@@ -1,51 +1,42 @@
 body {
-  font-family: 'Crimson Text', serif;
+  font-family: 'Avenir', serif;
   margin: 0 auto;
   padding: .5em 1em;
 }
 
-nav {
-  margin-top:1%;
-  margin-bottom: 1%;
-}
-
 .container-fluid {
   background-color: black;
-  padding: 5em;
+  padding: 3em;
 }
 
 #logo {
   height: 68px;
 }
 
-.nav ul {
-  family-font: 'Crimson Text', serif;
-  list-style-type: none;
-  margin: 10;
-  padding: 0;
-  padding-top:10;
-  overflow: hidden;
+ul.wirenav {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-bottom: 1em;
 }
 
-.nav li {
-  float: left;
-  font-family: 'Crimson Text', serif;
-  margin-left: 6%;
-  margin-right: 6%;
+ul.wirenav li {
+  margin-left: 8%;
+  margin-right: 8%;
+  display: inline-block;
 }
 
-.nav li a {
-  display: block;
-  color: black;
+ul.wirenav li a {
+  color: white;
   text-align: center;
 }
 
-.nav a.selected {
+ul.wirenav a.selected {
   font-style: italic;
 }
 
-.nav a:hover {
-  color: lightblue;
+ul.wirenav a:hover {
+  color: orange;
 }
 
 .text {
@@ -55,22 +46,21 @@ nav {
 }
 
 h2 {
-  font-size: 48pt;
+  font-size: 36pt;
 }
 
 .container-index {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
-  url("../assets/eMuseumJpgseMuseum2010.-2019NoCopyright2014.020.jpg");
+  background-image: url("../assets/black.png");
   background-size: cover;
   display:block;
   background-size:100%;
   background-repeat:no-repeat;
   height: 150hv;
-  font-family: 'Crimson Text', serif;
   text-align: center;
   color: white;
   opacity: 1;
   padding: 2%;
+  margin-top: -2%;
 }
 
 .text_index {
@@ -92,13 +82,15 @@ h2 {
 .btn.btn-primary {
   clear: both;
   border: none;
-  background-color: black;
+  background-color: orange;
+  color: black;
   margin-top: 5%;
   margin-bottom: 5%;
   font-style: normal;
   padding: 30px;
   text-align: center;
   display: inline-block;
+  border-radius: 50%;
 }
 
 .button {
@@ -116,6 +108,26 @@ h2 {
 
 .button:hover {
   background-color: lightgray;
+}
+
+.round-button {
+  display:flex;
+  width:180px;
+  height:180px;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: black;
+  text-align:center;
+  align-items: center;
+  background: #FFB30D;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.round-button:hover {
+  border: 3px solid #FFB30D;
+  color: black;
+  text-decoration: none;
 }
 
 .watermarkButton figure {
@@ -146,4 +158,41 @@ h2 {
   width: 120px;
   border-radius: 25px;
   opacity: 0.5;
+}
+
+.end-result {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  border: 15px solid #FFB30D;
+  border-radius: 50%;
+  color: black;
+  text-align: center;
+  align-items: center;
+  background: white;
+  font-size: 30pt;
+  font-weight: bold;
+  font-family: "Crimson Text"
+}
+
+.end-result-prefix {
+  font-size: 14pt;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.end-result-image {
+  width: 200px;
+  border-radius: 25px;
+}
+
+.end-result-explanation {
+  font-size: 16pt;
+}
+
+.end-result-examples-prefix {
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: "Crimson Text";
+  text-align: center;
 }

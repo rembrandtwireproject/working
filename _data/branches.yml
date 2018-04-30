@@ -20,6 +20,10 @@ countermark_l:
   name: Countermark 'L'
   image: cntr_l_example
 
+countermark_n:
+  name: Countermark 'N'
+  image: countermark_n_option_a
+
 crown:
   name: Crown
 
@@ -32,6 +36,7 @@ single_headed_eagle:
 
 fleur_de_lis:
   name: Fleur-de-lis
+  image: fleur_example
 
 foolscap_5_pointed_collar:
   name: Foolscap with<br/>Five-Pointed Collar
@@ -80,6 +85,7 @@ serpent:
 
 seven_provinces:
   name: Seven Provinces
+  image: option_a
 
 Small_Crosses:
   name: Small Crosses

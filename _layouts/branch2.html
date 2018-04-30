@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% assign url_elts = page.path | split: "/" %}
+{% assign branch_pos = url_elts | size | minus: 2 %}
+{% assign branch_slug = url_elts[branch_pos] %}
+{% assign branch_name = site.data.branches[branch_slug].name %}
+{% assign diagram = site.data.branches[branch_slug].diagram %}
+{% assign slug = page.path | split: "/" | last | split: "." | pop | join: "." %}
+
+{{ content }}
+
+<script>
+  sessionStorage.last = "{{ slug }}";
+  const image = sessionStorage.image;
+  const elem = document.createElement("img");
+  elem.setAttribute("src", image);
+  // This is temporary until we can use fixedwidth images
+  elem.setAttribute("width", "400px");
+  const left = document.getElementsByClassName("left")[0];
+  left.appendChild(elem);
+</script>

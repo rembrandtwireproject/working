@@ -5,6 +5,10 @@ arms_of_bern:
   name: Arms of Bern
   image: first_image
 
+arms_of_wurttemberg:
+  name: Arms of Württemberg
+  image: A_a_a 
+
 basel_crosier:
   name: Basel Crosier
   image: option_Aaa

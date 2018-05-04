@@ -8,9 +8,22 @@ layout: default
 {% assign branch_name = site.data.branches[branch_slug].name %}
 
 <div class="text">
-  <h2>{{ branch_name }} — Demo</h2>
-  <p>Choose a comparative watermark image to classify using the {{ branch_name }} Decision Branch.</p>
-  <p>Answer the questions provided to determine a match.</p>
+  <h2>{{ branch_name }}</h2>
+
+  <div class="text-center">
+    Before running through the {{ branch_name }} branch, choose<br/>
+    a comparative watermark to classify
+  </div>
+
+  <br/>
+
+  <div class="text-center">
+    You will then answer questions about your choice of<br/>
+    watermark, as you run through the branch to find its<br/>
+    subvariant classification.
+  </div>
+
+  <br/><br/>
 
   <div class="d-flex flex-row flex-wrap">
     {% for demo in page.demos %}
@@ -21,11 +34,9 @@ layout: default
         </figure>
       </div>
     {% endfor %}
-
-    <a class="button" href="../start.html">↻ Choose a different watermark type</a>
-
   </div>
 </div>
+
 <script>
   function init(image) {
     sessionStorage.image = image;

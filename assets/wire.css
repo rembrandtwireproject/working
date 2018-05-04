@@ -47,6 +47,7 @@ ul.wirenav a:hover {
 
 h2 {
   font-size: 36pt;
+  font-family: "Crimson Text";
 }
 
 .container-index {
@@ -95,7 +96,6 @@ h2 {
 
 .button {
   background-color: white;
-  box-shadow: 0 .7em .9em 0 rgba(0,0,0,0.24), 0 1em 3em 0 rgba(0,0,0,0.19);
   color: black;
   display: inline-block;
   margin-bottom: 1em;
@@ -104,10 +104,19 @@ h2 {
   text-align: center;
   text-decoration: none;
   width: 12em;
+  text-transform: uppercase;
+  font-size: 16pt;
+  letter-spacing: 5pt;
+  font-weight: bolder;
+  border: 3px solid white;
+  border-radius: 25px;
 }
 
 .button:hover {
-  background-color: lightgray;
+  border: 3px solid #FFB30D;
+  color: black;
+  text-decoration: none;
+  border-radius: 25px;
 }
 
 .round-button {
@@ -130,6 +139,17 @@ h2 {
   text-decoration: none;
 }
 
+.watermarkButton {
+  border: 3px solid white;
+  border-radius: 25px;
+}
+
+.watermarkButton:hover {
+  border: 3px solid #FFB30D;
+  color: #FFB30D;
+  border-radius: 25px;
+}
+
 .watermarkButton figure {
   display: block;
   float: left;
@@ -145,16 +165,17 @@ h2 {
 
 .watermarkButton figcaption {
   text-align: center;
+  padding-top: 10px;
 }
 
 .watermarkButton img {
-  height: 150px;
+  height: 200px;
   width: 120px;
   border-radius: 25px;
 }
 
 .watermarkButton img.inactive {
-  height: 150px;
+  height: 200px;
   width: 120px;
   border-radius: 25px;
   opacity: 0.5;
@@ -164,7 +185,7 @@ h2 {
   display: flex;
   width: 300px;
   height: 300px;
-  border: 15px solid #FFB30D;
+  border: 30px solid #FFB30D;
   border-radius: 50%;
   color: black;
   text-align: center;

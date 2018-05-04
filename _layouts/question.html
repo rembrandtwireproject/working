@@ -43,6 +43,8 @@ layout: branch2
     <h3>{{ page.question }}</h3>
   </center>
 
+  <span class="left" style="float:left;position: absolute"></span>
+
   <center>
     <img src="images/{{ slug }}.png" alt="{{ slug }}" style="width:400px">
   </center>
@@ -53,4 +55,9 @@ layout: branch2
 <center>
   <a class="button" href="{{ page.if-yes }}.html">{{ page.yes-text | default: "Yes" }}</a>
   <a class="button" href="{{ page.if-no }}.html">{{ page.no-text | default: "No" }}</a>
+  <br>
+  {% if diagram != "disabled" %}
+    <a class="button" href="diagram.html">Diagram</a>
+  {% endif %}
+  <a class="button" href="index.html">↻ Restart</a>
 </center>

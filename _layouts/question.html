@@ -1,11 +1,56 @@
 ---
-layout: branch
+layout: branch2
 ---
 
+{% assign url_elts = page.path | split: "/" %}
+{% assign branch_pos = url_elts | size | minus: 2 %}
+{% assign branch_slug = url_elts[branch_pos] %}
+{% assign branch_name = site.data.branches[branch_slug].name %}
+{% assign diagram = site.data.branches[branch_slug].diagram %}
 {% assign slug = page.path | split: "/" | last | split: "." | pop | join: "." %}
 
-<h3>{{ page.question }}</h3>
-<a class="button" href="{{ page.if-yes }}.html">{{ page.yes-text | default: "Yes" }}</a>
-<a class="button" href="{{ page.if-no }}.html">{{ page.no-text | default: "No" }}</a>
-<h3>Example</h3>
-<img src="images/{{ slug }}.png" alt="{{ slug }}" style="width:400px">
+<br/>
+<br/>
+
+<center>
+  <table style="margin-top: -20px">
+    <tr>
+      <td width="230px"></td>
+
+      <td>
+        <div class="end-result">
+          {{ branch_name }}
+        </div>
+      </td>
+
+      <td>
+        <svg width="230" height="300" xmlns="http://www.w3.org/2000/svg">
+          <line stroke-linecap="undefined" stroke-linejoin="undefined" stroke-dasharray="5,5" id="svg_2"
+            y2="135" x2="180.5" y1="82" x1="0.5"
+            stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none"/>
+          <ellipse ry="8" rx="8" id="svg_4" cy="132.5" cx="203"
+            stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none"/>
+        </svg>
+      </td>
+    </tr>
+  </table>
+</center>
+
+<div style="background-image:url(../assets/diverging_dotted_lines.svg);background-repeat: no-repeat;background-size: 400px 1000px;background-position: center;">
+  <br><br><br><br>
+
+  <center>
+    <h3>{{ page.question }}</h3>
+  </center>
+
+  <center>
+    <img src="images/{{ slug }}.png" alt="{{ slug }}" style="width:400px">
+  </center>
+
+  <br><br>
+</div>
+
+<center>
+  <a class="button" href="{{ page.if-yes }}.html">{{ page.yes-text | default: "Yes" }}</a>
+  <a class="button" href="{{ page.if-no }}.html">{{ page.no-text | default: "No" }}</a>
+</center>

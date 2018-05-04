@@ -2,12 +2,27 @@
 layout: default
 ---
 
-<script src="{{ site.baseurl }}/assets/mm.js"></script>
 <div class="text">
   <h2>Identify your watermark</h2>
-  <p>
-    Select the watermark type that best approximates your watermark from the choices below. Then answer the questions to establish a match.
-  </p>
+
+  <div class="text-center">
+    Each watermark has different variants and subvariants - there are<br/>
+    some watermarks that are so similar they are twins. The diagram<br/>
+    above is an example of the various variants and subvariants for one<br/>
+    watermark.
+  </div>
+  <br/>
+  <div class="text-center">
+    Answer the following <strong>yes / no</strong> questions and establish exactly what<br/>
+    watermark is on your print.  Below are various watermarks ... select one to<br/>
+    start.
+  </div>
+  <br/>
+  <div>
+    <a href="choose_user_image.html" style="color:#FFB30D;font-size:18pt;letter-spacing:5pt;font-weight: bold">UPLOAD YOUR WATERMARK</a>
+  </div>
+  <br/><br/>
+
   <div class="d-flex flex-row justify-content-center flex-wrap">
     {% for branch in site.data.branches %}
       <div class="p-2 watermarkButton">

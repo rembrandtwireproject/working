@@ -16,20 +16,8 @@ window.onload = function () {
   var dataScaleX = document.getElementById('dataScaleX');
   var dataScaleY = document.getElementById('dataScaleY');
   var options = {
-    aspectRatio: NaN,
+    aspectRatio: 0.6,
     preview: '.img-preview',
-    ready: function (e) {
-      console.log(e.type);
-    },
-    cropstart: function (e) {
-      console.log(e.type, e.detail.action);
-    },
-    cropmove: function (e) {
-      console.log(e.type, e.detail.action);
-    },
-    cropend: function (e) {
-      console.log(e.type, e.detail.action);
-    },
     crop: function (e) {
       var data = e.detail;
 
@@ -40,9 +28,6 @@ window.onload = function () {
       dataRotate.value = typeof data.rotate !== 'undefined' ? data.rotate : '';
       dataScaleX.value = typeof data.scaleX !== 'undefined' ? data.scaleX : '';
       dataScaleY.value = typeof data.scaleY !== 'undefined' ? data.scaleY : '';
-    },
-    zoom: function (e) {
-      console.log(e.type, e.detail.ratio);
     },
     zoomOnWheel: false
   };
@@ -82,7 +67,6 @@ window.onload = function () {
       if (target.getAttribute('data-method')) {
         break;
       }
-
       target = target.parentNode;
     }
 
@@ -99,6 +83,7 @@ window.onload = function () {
 
     cropped = cropper.cropped;
 
+    console.log(data);
     if (data.method) {
       if (typeof data.target !== 'undefined') {
         input = document.querySelector(data.target);
@@ -117,7 +102,6 @@ window.onload = function () {
           if (cropped && options.viewMode > 0) {
             cropper.clear();
           }
-
           break;
 
         case 'getCroppedCanvas':
@@ -134,7 +118,10 @@ window.onload = function () {
 
             data.option.fillColor = '#fff';
           }
+          break;
 
+        case 'save':
+          window.location.href= "start.html";
           break;
       }
 
@@ -145,7 +132,6 @@ window.onload = function () {
           if (cropped && options.viewMode > 0) {
             cropper.crop();
           }
-
           break;
 
         case 'scaleX':
@@ -161,15 +147,6 @@ window.onload = function () {
             uploadedImageURL = '';
             image.src = originalImageURL;
           }
-
-          break;
-
-        case 'save':
-          var dataURL = result.toDataURL(uploadedImageType);
-
-          sessionStorage.imgData = dataUrl;
-
-          // TODO: Go to next page
           break;
       }
 
@@ -186,39 +163,38 @@ window.onload = function () {
 
   // Import image
   var inputImage = document.getElementById('inputImage');
+  inputImage.onchange = function () {
+    var files = this.files;
+    var file;
 
-  if (URL) {
-    inputImage.onchange = function () {
-      var files = this.files;
-      var file;
+    if (cropper && files && files.length) {
+      file = files[0];
 
-      if (cropper && files && files.length) {
-        file = files[0];
+      if (/^image\/\w+/.test(file.type)) {
+        uploadedImageType = file.type;
+        uploadedImageName = file.name;
 
-        if (/^image\/\w+/.test(file.type)) {
-          uploadedImageType = file.type;
-          uploadedImageName = file.name;
-
-          if (uploadedImageURL) {
-            URL.revokeObjectURL(uploadedImageURL);
-          }
-
-          image.src = uploadedImageURL = URL.createObjectURL(file);
-          cropper.destroy();
-          cropper = new Cropper(image, options);
-          inputImage.value = null;
-
-          sessionStorage.image = uploadedImageURL;
-
-        } else {
-          window.alert('Please choose an image file.');
+        if (uploadedImageURL) {
+          URL.revokeObjectURL(uploadedImageURL);
         }
+
+        image.src = uploadedImageURL = URL.createObjectURL(file);
+        cropper.destroy();
+        cropper = new Cropper(image, options);
+        inputImage.value = null;
+
+        // Get the data url to save in session for the rest of the WIRE pages
+        var canvas = document.createElement("canvas");
+        canvas.width = image.width;
+        canvas.height = image.height;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(image, 0, 0);
+        var dataURL = canvas.toDataURL("image/png");
+        sessionStorage.setItem("sample",dataURL);
+
+      } else {
+        window.alert('Please choose an image file.');
       }
-    };
-
-
-  } else {
-    inputImage.disabled = true;
-    inputImage.parentNode.className += ' disabled';
-  }
+    }
+  };
 };

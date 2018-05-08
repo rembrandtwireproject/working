@@ -1,9 +1,13 @@
 TODO:
 
-- Yellow border around images on hover.
 - Watermark: black line does not reach yellow border of end type
 - Watermark: "Your watermark is:" should appear at the top, not the left side
 - Watermark: Type occasionally spills over the circle border (e.g. Foolscap)
+- Watermark: Also have comparative image "bubble"
+- Index: remove.  Just jump directly to question 1.
+- Question: If it's the first question, say "Reference Image Below"
+- Overall: Call the user image "sample" ... at least for now.
+
 
 FUTURE:
 
@@ -12,3 +16,5 @@ FUTURE:
 - Coarse Editor: remove arrow buttons, which are not useful.
 - Fine Editor: Reverse b/w, color -> greyscale
 - Watermark: Haven't decided on whether actual prints will appear, and how they will be referenced
+- Identify: Auto magnify when you hove over
+-

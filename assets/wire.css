@@ -203,7 +203,7 @@ h2 {
 }
 
 .end-result-image {
-  width: 200px;
+  width: 180px;
   border-radius: 25px;
 }
 
@@ -216,4 +216,37 @@ h2 {
   font-weight: bold;
   font-family: "Crimson Text";
   text-align: center;
+}
+
+#sample {
+  position: absolute;
+  border: 10px solid #FFB30D;
+  border-radius: 50%;
+  width: 400px;
+  height: 500px;
+  z-index: 999;
+}
+
+#sample:hover {
+  background: url( "../assets/moveable.png");
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  background-position: center;
+}
+
+#sample-title-and-img {
+  padding-left: 100px;
+  padding-top: 50px;
+}
+
+#sample img {
+  width: 180px;
+  height: 300px;
+}
+
+#sample-title {
+  text-transform: uppercase;
+  font-size: 16pt;
+  letter-spacing: 5pt;
+  font-weight: bolder;
 }

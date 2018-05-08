@@ -39,7 +39,7 @@ layout: default
 
 <script>
   function init(image) {
-    sessionStorage.image = image;
+    sessionStorage.setItem("sample", image);
     window.location.href = "{{ page.start }}.html";
   }
 </script>

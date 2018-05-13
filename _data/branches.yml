@@ -72,6 +72,7 @@ man:
 
 paschal_lamb:
   name: Paschal Lamb
+  image: lamb_option_a
 
 phoenix:
   name: Phoenix

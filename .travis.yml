@@ -1,11 +1,11 @@
 # This skips any bundle install, which Travis will try to do because it sees a Gemfile
 install: true
 
-addons:
-  apt:
-    update: true
-    packages:
-      - yamllint
+#addons:
+#  apt:
+#    update: true
+#    packages:
+#      - yamllint
 
 # This checks the syntax of the site and sends any errors to committer
 script:

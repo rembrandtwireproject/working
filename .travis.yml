@@ -4,9 +4,8 @@ install: true
 addons:
   apt:
     update: true
-
-before_install:
-  - sudo apt-get install -y yamllint
+    packages:
+      - yamllint
 
 # This checks the syntax of the site and sends any errors to committer
 script:

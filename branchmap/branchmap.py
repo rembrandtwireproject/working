@@ -27,9 +27,6 @@ with io.open("../_data/branches.yml", "r") as stream:
 for branch, branch_metadata in all_branches.items():
   print(branch)
   if "image" in branch_metadata and branch != "foolscap_5_pointed_collar":
-    index_file = f"../_pages/{branch}/index.html"
-    branch_data = get_metadata(index_file)
-
-    branchmap = create_node(branch_data["start"], branch)
+    branchmap = create_node(branch_metadata["start"], branch)
     with io.open(f"../_pages/{branch}/branchmap.json", "w") as bmstream:
       bmstream.write(json.dumps(branchmap))

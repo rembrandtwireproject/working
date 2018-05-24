@@ -4,30 +4,37 @@ anchor:
 arms_of_bern:
   name: Arms of Bern
   image: first_image
+  start: edgescrolls
 
 arms_of_wurttemberg:
   name: Arms of Württemberg
   image: Wurttemberg_cover_image
+  start: letters_below_crest_q1
 
 basel_crosier:
   name: Basel Crosier
   image: option_Aaa
+  start: basel_q1
 
 basilisk:
   name: Basilisk
   image: A2aa
+  start: chainline_vertical
 
 countermark_f:
   name: Countermark 'F'
   image: option_d
+  start: c_follows_q1
 
 countermark_l:
   name: Countermark 'L'
   image: cntr_l_example
+  start: followedby_b
 
 countermark_n:
   name: Countermark 'N'
   image: countermark_n_option_a
+  start: countermark_n_question_1
 
 crown:
   name: Crown
@@ -38,15 +45,18 @@ dovecote:
 single_headed_eagle:
   name: Eagle
   image: single_headed_eagle
+  start: basel_eagle
 
 fleur_de_lis:
   name: Fleur-de-lis
   image: fleur_example
+  start: divided_line
 
 foolscap_5_pointed_collar:
   name: Foolscap with<br/>Five-Pointed Collar
   image: option_a
   diagram: disabled
+  start: fourpointfivepoint
 
 grapes:
   name: Grapes
@@ -66,6 +76,7 @@ lion:
 Lorraine_Cross:
   name: Lorraine Crosses
   image: LorraineA.a.b
+  start: LorrainQuestion1
 
 man:
   name: Man
@@ -73,6 +84,7 @@ man:
 paschal_lamb:
   name: Paschal Lamb
   image: lamb_option_a
+  start: cartouche_q1
 
 phoenix:
   name: Phoenix
@@ -92,10 +104,12 @@ serpent:
 seven_provinces:
   name: Seven Provinces
   image: option_a
+  start: pointed_tip_q1
 
 Small_Crosses:
   name: Small Crosses
   image: CrossesA.a.b
+  start: CrossesSmallCircle
 
 star:
   name: Star

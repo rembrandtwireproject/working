@@ -36,7 +36,7 @@ ul.wirenav a.selected {
 }
 
 ul.wirenav a:hover {
-  color: orange;
+  color: #FFB30D;
 }
 
 .text {
@@ -83,7 +83,7 @@ h2 {
 .btn.btn-primary {
   clear: both;
   border: none;
-  background-color: orange;
+  background-color: #FFB30D;
   color: black;
   margin-top: 5%;
   margin-bottom: 5%;

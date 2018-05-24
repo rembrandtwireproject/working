@@ -1,5 +1,5 @@
 ---
-layout: branch2
+layout: branch
 ---
 
 {% assign url_elts = page.path | split: "/" %}
@@ -57,5 +57,5 @@ layout: branch2
   {% if diagram != "disabled" %}
     <a class="button" href="diagram.html">Diagram</a>
   {% endif %}
-  <a class="button" href="index.html">↻ Restart</a>
+  <a class="button" href="{{ site.data.branches[branch_slug].start }}.html">↻ Restart</a>
 </center>

@@ -1,21 +1,32 @@
 ---
 layout: default
+demos:
+  - arms_of_bern/images/option_1.png
+  - arms_of_wurttemberg/images/A_a_a.png
+  - basel_crosier/images/B'aa.png
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.3.5/cropper.min.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.3.5/cropper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 <script src="{{ site.baseurl }}/assets/choose_user_image.js"></script>
 
 <div class="text">
-  <h2>Upload your watermark</h2>
-  <p>
-    Click the <span class="fa fa-upload"></span> icon to upload your image.  TODO: Also have option for picking a
-    sample one.
-  </p>
+  <h2>Upload Your Watermark or Choose a Sample</h2>
+</div>
+
+<div class="d-flex flex-row flex-wrap">
+  {% for demo in page.demos %}
+    <div class="p-2 watermarkButton">
+      <figure>
+        <img src="{{ demo }}">
+      </figure>
+    </div>
+  {% endfor %}
+
+  <label class="btn btn-primary btn-upload" for="inputImage" title="Upload image file">
+    <input type="file" class="sr-only" id="inputImage" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+    Upload
+  </label>
 </div>
 
 <div class="img-container">
@@ -82,12 +93,6 @@ layout: default
           <span class="fa fa-refresh"></span>
         </span>
       </button>
-      <label class="btn btn-primary btn-upload" for="inputImage" title="Upload image file">
-        <input type="file" class="sr-only" id="inputImage" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
-        <span class="docs-tooltip" >
-          <span class="fa fa-upload"></span>
-        </span>
-      </label>
     </div>
 
     <div class="btn-group">

@@ -83,7 +83,6 @@ window.onload = function () {
 
     cropped = cropper.cropped;
 
-    console.log(data);
     if (data.method) {
       if (typeof data.target !== 'undefined') {
         input = document.querySelector(data.target);
@@ -121,7 +120,7 @@ window.onload = function () {
           break;
 
         case 'save':
-          window.location.href= "start.html";
+          window.location.href= "choose_branch.html";
           break;
       }
 
@@ -184,17 +183,47 @@ window.onload = function () {
         inputImage.value = null;
 
         // Get the data url to save in session for the rest of the WIRE pages
+        // Note the onload function is necessary because we can't use the canvas
+        // conversion utils until the image is actually all loaded.
         var canvas = document.createElement("canvas");
-        canvas.width = image.width;
-        canvas.height = image.height;
         var ctx = canvas.getContext("2d");
-        ctx.drawImage(image, 0, 0);
-        var dataURL = canvas.toDataURL("image/png");
-        sessionStorage.setItem("sample",dataURL);
 
+        var inMemoryImage = new Image();
+        inMemoryImage.src = uploadedImageURL;
+        inMemoryImage.onload = function() {
+          canvas.width = inMemoryImage.naturalWidth;
+          canvas.height = inMemoryImage.naturalHeight;
+          ctx.drawImage(inMemoryImage, 0, 0);
+          var dataURL = canvas.toDataURL();
+          sessionStorage.setItem("sample",dataURL);
+        };
       } else {
         window.alert('Please choose an image file.');
       }
     }
   };
+
+  function chooseImage(event) {
+    image.src = event.target.src;
+
+    cropper.destroy();
+    cropper = new Cropper(image, options);
+
+    var canvas = document.createElement("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var inMemoryImage = new Image();
+    inMemoryImage.src = event.target.src;
+    inMemoryImage.onload = function() {
+      canvas.width = inMemoryImage.naturalWidth;
+      canvas.height = inMemoryImage.naturalHeight;
+      ctx.drawImage(inMemoryImage, 0, 0);
+      var dataURL = canvas.toDataURL();
+      sessionStorage.setItem("sample",dataURL);
+    };
+  }
+
+  for (var sampleImage of document.querySelectorAll('.watermarkButton figure img')) {
+    sampleImage.onclick = chooseImage;
+  }
 };

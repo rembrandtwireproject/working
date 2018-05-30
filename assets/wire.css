@@ -94,6 +94,20 @@ h2 {
   border-radius: 50%;
 }
 
+.btn.btn-small {
+  clear: both;
+  border: 3px solid #FFB30D;
+  background-color: white;
+  color: black;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-style: normal;
+  padding: 30px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+}
+
 .button {
   background-color: white;
   color: black;

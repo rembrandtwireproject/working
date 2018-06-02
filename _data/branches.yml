@@ -116,6 +116,8 @@ star:
 
 strasbourg_bend:
   name: Strasbourg Bend
+  image: Eaa
+  start: initials_q1
 
 strasbourg_lily:
   name: Strasbourg Lily

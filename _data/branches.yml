@@ -69,7 +69,7 @@ horse_and_rider:
 
 IHS:
   name: IHS
-  image: option1
+  image: Example1
   start: any_following_true
 
 kings_head:

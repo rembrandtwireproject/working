@@ -67,6 +67,11 @@ hare:
 horse_and_rider:
   name: Horse and Rider
 
+IHS:
+  name: IHS
+  image: Example1
+  start: any_following_true
+
 kings_head:
   name: King’s Head
 

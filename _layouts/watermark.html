@@ -43,10 +43,19 @@ layout: branch
 
 <div class="container">
   <div class="row">
-    <div class="col-md-3"></div>
-
-    <div class="col-md-3">
-      <img src="images/{{ slug }}.png" alt="{{ slug }}" class="end-result-image">
+    <div class="col-md-6">
+      <a class="magnifier-thumb-wrapper" style="width:400px">
+        <img id ="thumb-inside" src="images/{{ slug }}.png" alt="{{ slug }}" class="end-result-image">
+      </a>
+      <script>
+        m.attach({
+          thumb: '#thumb-inside',
+          large: "images/{{ slug }}.png",
+          mode: 'inside',
+          zoom: 2,
+          zoomable: true
+        });
+      </script>`
     </div>
 
     <div class="col-md-4 end-result-explanation" >

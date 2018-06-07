@@ -22,13 +22,11 @@ layout: default
 
   <div class="row">
     <div class="col-md-3">
-      <span id="sample" style="position: relative;">
-        <div id="sample-title-and-img">
-          <span id="sample-title">Your<br/>Watermark</span>
-          <br/>
-          <img>
-        </div>
-      </span>
+      <div id="sample-title-and-img">
+        <span id="sample-title">Your<br/>Watermark</span>
+        <br/>
+        <img id="sampleImage">
+      </div>
     </div>
 
     <div class="col-md-9">
@@ -54,6 +52,6 @@ layout: default
 
 <script>
   const sampleImage = sessionStorage.getItem("sample");
-  const sampleImageTag = $("#sample-title-and-img img")[0];
+  const sampleImageTag = $("#sampleImage")[0];
   sampleImageTag.src = sampleImage;
 </script>

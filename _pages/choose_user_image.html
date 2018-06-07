@@ -30,6 +30,9 @@ demos:
     <div class="p-2 watermarkButton">
       <figure>
         <img src="{{ demo }}">
+        {% assign demo_elts = demo | split: "/" %}
+        {% assign demo_branch = demo_elts[0] %}
+        <figcaption>{{ site.data.branches[demo_branch].name }}</figcaption>
       </figure>
     </div>
   {% endfor %}
@@ -46,6 +49,19 @@ demos:
 
 <div id="actions">
   <div class="docs-buttons">
+    <div class="btn-group">
+      <button type="button" class="btn btn-small" data-method="zoom" data-option="0.1" title="Zoom In">
+        <span class="docs-tooltip">
+          <span class="fa fa-search-plus"></span>
+        </span>
+      </button>
+      <button type="button" class="btn btn-small" data-method="zoom" data-option="-0.1" title="Zoom Out">
+        <span class="docs-tooltip">
+          <span class="fa fa-search-minus"></span>
+        </span>
+      </button>
+    </div>
+
     <div class="btn-group">
       <button type="button" class="btn btn-small" data-method="rotate" data-option="-45" title="Rotate Left">
         <span class="docs-tooltip" >

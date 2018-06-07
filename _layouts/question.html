@@ -2,15 +2,6 @@
 layout: branch
 ---
 
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/magnifier.css">
-
-<script type="text/javascript" src="{{ site.baseurl }}/assets/Event.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/Magnifier.js"></script>
-<script type="text/javascript">
-var evt = new Event(),
-    m = new Magnifier(evt);
-</script>
-
 {% assign url_elts = page.path | split: "/" %}
 {% assign branch_pos = url_elts | size | minus: 2 %}
 {% assign branch_slug = url_elts[branch_pos] %}
@@ -55,7 +46,7 @@ var evt = new Event(),
   <center>
     <div>
       <a class="magnifier-thumb-wrapper" style="width:400px">
-        <img id="thumb-inside" src="images/{{ slug }}.png"  style="width:400px">
+        <img id="thumb-inside" src="images/{{ slug }}.png" style="width:400px">
       </a>
     </div>
     <script>
@@ -63,7 +54,7 @@ var evt = new Event(),
         thumb: '#thumb-inside',
         large: 'images/{{ slug }}.png',
         mode: 'inside',
-        zoom: 3,
+        zoom: 2,
         zoomable: true
       });
     </script>`

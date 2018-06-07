@@ -9,6 +9,15 @@ layout: default
 {% assign diagram = site.data.branches[branch_slug].diagram %}
 {% assign slug = page.path | split: "/" | last | split: "." | pop | join: "." %}
 
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/magnifier.css">
+
+<script type="text/javascript" src="{{ site.baseurl }}/assets/Event.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/Magnifier.js"></script>
+<script type="text/javascript">
+var evt = new Event(),
+    m = new Magnifier(evt);
+</script>
+
 <span id="sample" draggable="true">
   <div id="sample-title-and-img">
     <span id="sample-title">Your<br/>Watermark</span>

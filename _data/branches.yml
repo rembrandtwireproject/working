@@ -37,8 +37,18 @@ countermark_n:
   image: countermark_n_option_a
   start: countermark_n_question_1
 
+Small_Crosses:
+  name: Cross
+  image: CrossesA.a.b
+  start: CrossesSmallCircle
+
+Lorraine_Cross:
+  name: Cross of Lorraine
+  image: LorraineA.a.b
+  start: LorrainQuestion1
+
 crown:
-  name: Crown
+  name: Crown with a Cross
 
 dovecote:
   name: Dovecote
@@ -79,11 +89,6 @@ kings_head:
 lion:
   name: Lion
 
-Lorraine_Cross:
-  name: Lorraine Crosses
-  image: LorraineA.a.b
-  start: LorrainQuestion1
-
 man:
   name: Man
 
@@ -111,11 +116,6 @@ seven_provinces:
   name: Seven Provinces
   image: option_a
   start: pointed_tip_q1
-
-Small_Crosses:
-  name: Small Crosses
-  image: CrossesA.a.b
-  start: CrossesSmallCircle
 
 star:
   name: Star

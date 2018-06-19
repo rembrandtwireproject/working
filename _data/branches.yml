@@ -49,9 +49,11 @@ Lorraine_Cross:
 
 crown:
   name: Crown with a Cross
+  image: crown
 
 dovecote:
   name: Dovecote
+  image: dovecote
 
 single_headed_eagle:
   name: Eagle
@@ -71,12 +73,15 @@ foolscap_5_pointed_collar:
 
 grapes:
   name: Grapes
+  image: grapes
 
 hare:
   name: Hare
+  image: hare
 
 horse_and_rider:
   name: Horse and Rider
+  image: horse_and_rider
 
 IHS:
   name: IHS
@@ -85,12 +90,15 @@ IHS:
 
 kings_head:
   name: King’s Head
+  image: kings_head
 
 lion:
   name: Lion
+  image: lion
 
 man:
   name: Man
+  image: man
 
 paschal_lamb:
   name: Paschal Lamb
@@ -99,18 +107,23 @@ paschal_lamb:
 
 phoenix:
   name: Phoenix
+  image: phoenix
 
 posthorn:
   name: Posthorn
+  image: posthorn
 
 pot:
   name: Pot
+  image: pot
 
 pro_patria:
   name: Pro Patria
+  image: pro_patria
 
 serpent:
   name: Serpent
+  image: serpent
 
 seven_provinces:
   name: Seven Provinces
@@ -119,6 +132,7 @@ seven_provinces:
 
 star:
   name: Star
+  image: star
 
 strasbourg_bend:
   name: Strasbourg Bend
@@ -127,9 +141,12 @@ strasbourg_bend:
 
 strasbourg_lily:
   name: Strasbourg Lily
+  image: strasbourg_lily
 
 wheel:
   name: Wheel
+  image: wheel
 
 words:
   name: Words
+  image: words

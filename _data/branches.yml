@@ -2,6 +2,10 @@ anchor:
   name: Anchor
   image: anchor
 
+arms_of_amsterdam:
+  name: Arms of Amsterdam
+  image: arms_of_amsterdam
+
 arms_of_bern:
   name: Arms of Bern
   image: first_image

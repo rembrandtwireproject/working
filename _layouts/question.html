@@ -43,11 +43,23 @@ layout: branch
     <h3>{{ page.question }}</h3>
   </center>
 
-  <center>
-    <div>
-      <a class="magnifier-thumb-wrapper" style="width:400px">
-        <img id="thumb-inside" src="images/{{ slug }}.png" style="width:400px">
-      </a>
+  <div class="row">
+    <div class="col-md-3 ">
+      <div id="sample-title-and-img">
+        <span id="sample-title" class="pull-right">Your<br/>Watermark</span>
+        <br/>
+        <a class="magnifier-thumb-wrapper" class="pull-right" style="width:300px">
+          <img id="sampleImage" style="width:300px">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <center>
+        <a class="magnifier-thumb-wrapper" style="width:400px">
+          <img id="thumb-inside" src="images/{{ slug }}.png" style="width:400px">
+        </a>
+      </center>
     </div>
     <script>
       m.attach({
@@ -58,9 +70,9 @@ layout: branch
         zoomable: true
       });
     </script>`
-  </center>
 
-  <br><br>
+    <div class="col-md-3">
+    </div>
 </div>
 
 <center>
@@ -72,3 +84,17 @@ layout: branch
   {% endif %}
   <a class="button" href="{{ site.data.branches[branch_slug].start }}.html">↻ Restart</a>
 </center>
+
+<script>
+  const sampleImage = sessionStorage.getItem("sample");
+  const sampleImageTag = $("#sampleImage")[0];
+  sampleImageTag.src = sampleImage;
+
+  m2.attach({
+    thumb: '#sampleImage',
+    large: sampleImage,
+    mode: 'inside',
+    zoom: 2,
+    zoomable: true
+  });
+</script>

@@ -8,7 +8,7 @@ arms_of_bern:
   start: edgescrolls
 
 arms_of_wurttemberg:
-  name: Arms of Württemberg
+  name: Arms of<br/>Württemberg
   image: Wurttemberg_cover_image
   start: letters_below_crest_q1
 
@@ -48,7 +48,7 @@ Lorraine_Cross:
   start: LorrainQuestion1
 
 crown:
-  name: Crown with a Cross
+  name: Crown with a<br/>Cross
   image: crown
 
 dovecote:

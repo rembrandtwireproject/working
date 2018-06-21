@@ -150,7 +150,6 @@ window.onload = function () {
     }
   };
 
-
   // Import image
   var inputImage = document.getElementById('inputImage');
   inputImage.onchange = function () {
@@ -190,15 +189,16 @@ window.onload = function () {
     var inMemoryImage = new Image();
     inMemoryImage.src = event.target.src;
     inMemoryImage.onload = function() {
+      console.log("Setting canvas height to "+inMemoryImage.naturalHeight /* +200 */);
       canvas.width = inMemoryImage.naturalWidth;
-      canvas.height = inMemoryImage.naturalHeight;
+      canvas.height = inMemoryImage.naturalHeight/* + 200 */;
       ctx.drawImage(inMemoryImage, 0, 0);
       var dataURL = canvas.toDataURL();
       sessionStorage.setItem("sample",dataURL);
     };
   }
 
-  for (var sampleImage of document.querySelectorAll('.watermarkButton figure img')) {
+  for (var sampleImage of document.querySelectorAll('.chooseYourWatermarkButton figure img')) {
     sampleImage.onclick = chooseImage;
   }
 };

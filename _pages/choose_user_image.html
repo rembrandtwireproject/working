@@ -27,7 +27,7 @@ demos:
 
 <div class="d-flex flex-row flex-wrap">
   {% for demo in page.demos %}
-    <div class="p-2 watermarkButton">
+    <div class="p-2 chooseYourWatermarkButton">
       <figure>
         <img src="{{ demo }}">
         {% assign demo_elts = demo | split: "/" %}
@@ -97,10 +97,8 @@ demos:
     </div>
 
     <div class="btn-group">
-      <button type="button" class="btn btn-small" data-method="save" title="Save and Proceed">
-        <span class="docs-tooltip">
-          <span class="fa fa-save"></span>
-        </span>
+      <button type="button" class="btn btn-primary btn-upload" data-method="save" title="Save and Proceed">
+        Done
       </button>
     </div>
   </div>

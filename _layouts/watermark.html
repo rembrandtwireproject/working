@@ -43,29 +43,41 @@ layout: branch
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
-      <a class="magnifier-thumb-wrapper" style="width:400px">
-        <img id ="thumb-inside" src="images/{{ slug }}.png" alt="{{ slug }}" class="end-result-image">
-      </a>
-      <script>
-        m.attach({
-          thumb: '#thumb-inside',
-          large: "images/{{ slug }}.png",
-          mode: 'inside',
-          zoom: 2,
-          zoomable: true
-        });
-      </script>`
+
+    <div class="col-md-3 ">
+      <div id="sample-title-and-img">
+        <span id="sample-title" class="pull-right">Your<br/>Watermark</span>
+        <br/>
+        <a class="magnifier-thumb-wrapper" class="pull-right" style="width:300px">
+          <img id="sampleImage" style="width:300px">
+        </a>
+      </div>
     </div>
 
-    <div class="col-md-4 end-result-explanation" >
+    <div class="col-md-6">
+      <center>
+        <a class="magnifier-thumb-wrapper" style="width:400px">
+          <img id ="thumb-inside" src="images/{{ slug }}.png" alt="{{ slug }}" class="end-result-image">
+        </a>
+        <script>
+          m.attach({
+            thumb: '#thumb-inside',
+            large: "images/{{ slug }}.png",
+            mode: 'inside',
+            zoom: 2,
+            zoomable: true
+          });
+        </script>`
+      </center>
+    </div>
+
+    <div class="col-md-3 end-result-explanation" >
       {{ page.clarification }}
       {% if page.datable %}
         This paper is datable to {{ page.datable }}.
       {% endif %}
     </div>
 
-    <div class="col-md-2"></div>
   </div>
 </div>
 
@@ -98,3 +110,17 @@ layout: branch
     <div class="col-md-2"></div>
   </div>
 </div>
+
+<script>
+  const sampleImage = sessionStorage.getItem("sample");
+  const sampleImageTag = $("#sampleImage")[0];
+  sampleImageTag.src = sampleImage;
+
+  m2.attach({
+    thumb: '#sampleImage',
+    large: sampleImage,
+    mode: 'inside',
+    zoom: 2,
+    zoomable: true
+  });
+</script>

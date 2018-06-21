@@ -153,16 +153,37 @@ h2 {
   text-decoration: none;
 }
 
-.watermarkButton {
+.chooseYourWatermarkButton {
   border: 3px solid white;
   border-radius: 25px;
 }
 
-.watermarkButton:hover {
+.chooseYourWatermarkButton:hover {
   border: 3px solid #FFB30D;
   color: #FFB30D;
   border-radius: 25px;
 }
+
+.chooseYourWatermarkButton figure {
+  display: block;
+  float: left;
+  margin-left: 0.5em;
+  margin-top: 0;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+}
+
+.chooseYourWatermarkButton figcaption {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.chooseYourWatermarkButton img {
+  height: 200px;
+  width: 120px;
+  border-radius: 25px;
+}
+
 
 .watermarkButton figure {
   display: block;
@@ -173,19 +194,21 @@ h2 {
   margin-bottom: 1em;
 }
 
-.watermarkButton figure:hover {
-  cursor: pointer;
-}
-
 .watermarkButton figcaption {
   text-align: center;
   padding-top: 10px;
 }
 
-.watermarkButton img {
+.watermarkButton img.active {
   height: 200px;
   width: 120px;
   border-radius: 25px;
+  transition: transform .2s; /* Animation */
+}
+
+.watermarkButton img.active:hover {
+  transform: scale(2.0);
+  cursor: pointer;
 }
 
 .watermarkButton img.inactive {
@@ -193,6 +216,10 @@ h2 {
   width: 120px;
   border-radius: 25px;
   opacity: 0.5;
+}
+
+.watermarkButton img.inactive:hover {
+  transform: none;
 }
 
 .end-result {
@@ -274,4 +301,8 @@ h2 {
 
 .img-container img {
   max-width: 100%
+}
+
+.docs-tooltip {
+  font-size: 28pt;
 }

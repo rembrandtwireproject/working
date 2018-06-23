@@ -306,3 +306,10 @@ h2 {
 .docs-tooltip {
   font-size: 28pt;
 }
+
+glossary {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+

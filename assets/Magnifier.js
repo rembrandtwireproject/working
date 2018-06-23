@@ -562,6 +562,10 @@ var Magnifier = function (evt, options) {
             largeObj.src = data[idx].largeUrl;
         });
 
+        evt.attach('click', thumb, function (e, src) {
+            alert("Hi mom!");
+        });
+
         thumbObj.src = thumb.src;
     };
 

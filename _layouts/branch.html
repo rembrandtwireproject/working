@@ -17,6 +17,10 @@ layout: default
 var evt = new Event(),
     m = new Magnifier(evt);
     m2 = new Magnifier(evt);
+
+$(document).ready(function() {
+  Tipped.create('glossary', $('<img src=images/glossary.png>'));
+});
 </script>
 
 {{ content }}

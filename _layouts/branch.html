@@ -19,7 +19,9 @@ var evt = new Event(),
     m2 = new Magnifier(evt);
 
 $(document).ready(function() {
-  Tipped.create('glossary', $('<img src=images/glossary.png>'));
+  if ($('glossary').length) {
+    Tipped.create('glossary', $('<img src=images/glossary.png>'));
+  }
 });
 </script>
 

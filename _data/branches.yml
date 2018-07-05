@@ -5,6 +5,7 @@ anchor:
 arms_of_amsterdam:
   name: Arms of Amsterdam
   image: arms_of_amsterdam
+  start: feathers_q1
 
 arms_of_bern:
   name: Arms of Bern

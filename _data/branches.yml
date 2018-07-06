@@ -107,7 +107,7 @@ man:
 
 paschal_lamb:
   name: Paschal Lamb
-  image: PAAS_Eaa
+  image: lamb_option_a
   start: cartouche_q1
 
 phoenix:

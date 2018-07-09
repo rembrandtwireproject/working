@@ -42,6 +42,11 @@ countermark_n:
   image: countermark_n_option_a
   start: countermark_n_question_1
 
+countermark_v:
+  name: Countermark 'V'
+  image: image1
+  start: double_wired
+  
 Small_Crosses:
   name: Cross
   image: CrossesA.a.b

@@ -32,6 +32,11 @@ countermark_f:
   image: option_d
   start: c_follows_q1
 
+countermark_g:
+  name: Countermark 'G'
+  image: GIab
+  start: chain_line
+
 countermark_l:
   name: Countermark 'L'
   image: cntr_l_example
@@ -46,7 +51,7 @@ countermark_v:
   name: Countermark 'V'
   image: image1
   start: double_wired
-  
+
 Small_Crosses:
   name: Cross
   image: CrossesA.a.b

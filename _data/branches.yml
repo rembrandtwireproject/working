@@ -34,7 +34,7 @@ countermark_f:
 
 countermark_g:
   name: Countermark 'G'
-  image: GIab
+  image: CNTRMRK-GR2-a
   start: chain_line
 
 countermark_l:

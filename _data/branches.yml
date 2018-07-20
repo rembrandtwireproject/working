@@ -27,7 +27,7 @@ basilisk:
   image: A2aa
   start: chainline_vertical
 
-countermark_a
+countermark_a:
   name: Countermark 'A'
   image: image1
   start: three_letters

@@ -88,8 +88,7 @@ fleur_de_lis:
 foolscap_5_pointed_collar:
   name: Foolscap with<br/>Five-Pointed Collar
   image: option_a
-  diagram: disabled
-  start: fourpointfivepoint
+  start: four_points
 
 grapes:
   name: Grapes

@@ -75,10 +75,10 @@ dovecote:
   name: Dovecote
   image: dovecote
 
-single_headed_eagle:
+eagle:
   name: Eagle
-  image: single_headed_eagle
-  start: basel_eagle
+  image: eagle
+  start: two_heads
 
 fleur_de_lis:
   name: Fleur-de-lis

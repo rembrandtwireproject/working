@@ -1,0 +1,7 @@
+---
+layout: question
+question: Does the bottom of the chest end in a point?
+parent: single_crown
+if-yes: initials_id
+if-no: DoubleEagleFa
+---

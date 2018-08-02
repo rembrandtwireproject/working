@@ -1,0 +1,7 @@
+---
+layout: question
+question: Do the initials "ID" appear within the chest?
+parent: chest_point
+if-yes: crosier_curl
+if-no: wire_separates
+---

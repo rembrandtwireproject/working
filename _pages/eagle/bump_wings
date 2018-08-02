@@ -1,0 +1,7 @@
+---
+layout: question
+question: Do the top edges of both wings have a bump below each beak?
+parent: sings_up
+if-yes: DoubleEagleDab
+if-no: DoubleEagleDaa
+---

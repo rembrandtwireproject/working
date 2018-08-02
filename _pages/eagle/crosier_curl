@@ -1,0 +1,6 @@
+---
+layout: question
+question: Does the Basel crosier curl toward the "I"?
+parent: initials_id
+if-yes: DoubleEagleCaa
+if-no: DoubleEagleCab

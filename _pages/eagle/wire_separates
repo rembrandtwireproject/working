@@ -1,0 +1,7 @@
+---
+layout: question
+question: Is there a wire separating the necks from the chest?
+parent: initials_id
+if-yes: DoubleEagleCc
+if-no: DoubleEagleCba
+---

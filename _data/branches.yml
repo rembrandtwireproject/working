@@ -42,6 +42,11 @@ countermark_g:
   image: CNTRMRK-GR2-a
   start: chain_line
 
+countermark_i:
+  name: Countermark 'I'
+  image:
+  start: letters_BDR
+
 countermark_l:
   name: Countermark 'L'
   image: cntr_l_example

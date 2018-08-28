@@ -12,6 +12,11 @@ arms_of_bern:
   image: first_image
   start: edgescrolls
 
+arms_of_ravensburg:
+  name: Arms of <br/>Ravensburg
+  image: Ab
+  start: shield_BM
+
 arms_of_wurttemberg:
   name: Arms of<br/>Württemberg
   image: Wurttemberg_cover_image

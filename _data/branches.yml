@@ -112,6 +112,10 @@ horse_and_rider:
   name: Horse and Rider
   image: horse_and_rider
 
+  IHP:
+    name: IHP
+    image: IHPA.a.a
+
 IHS:
   name: IHS
   image: Example1

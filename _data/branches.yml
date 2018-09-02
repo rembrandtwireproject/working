@@ -156,7 +156,7 @@ pro_patria:
 
 serpent:
   name: Serpent
-  image: serpent
+  image: SerpentA.a.a
 
 seven_provinces:
   name: Seven Provinces

@@ -36,7 +36,7 @@ ul.wirenav a.selected {
 }
 
 ul.wirenav a:hover {
-  color: orange;
+  color: #FFB30D;
 }
 
 .text {
@@ -83,7 +83,21 @@ h2 {
 .btn.btn-primary {
   clear: both;
   border: none;
-  background-color: orange;
+  background-color: #FFB30D;
+  color: black;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-style: normal;
+  padding: 30px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.btn.btn-small {
+  clear: both;
+  border: 3px solid #FFB30D;
+  background-color: white;
   color: black;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -139,16 +153,37 @@ h2 {
   text-decoration: none;
 }
 
-.watermarkButton {
+.chooseYourWatermarkButton {
   border: 3px solid white;
   border-radius: 25px;
 }
 
-.watermarkButton:hover {
+.chooseYourWatermarkButton:hover {
   border: 3px solid #FFB30D;
   color: #FFB30D;
   border-radius: 25px;
 }
+
+.chooseYourWatermarkButton figure {
+  display: block;
+  float: left;
+  margin-left: 0.5em;
+  margin-top: 0;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+}
+
+.chooseYourWatermarkButton figcaption {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.chooseYourWatermarkButton img {
+  width: 120px;
+  height: 180px;
+  border-radius: 25px;
+}
+
 
 .watermarkButton figure {
   display: block;
@@ -159,19 +194,21 @@ h2 {
   margin-bottom: 1em;
 }
 
-.watermarkButton figure:hover {
-  cursor: pointer;
-}
-
 .watermarkButton figcaption {
   text-align: center;
   padding-top: 10px;
 }
 
-.watermarkButton img {
+.watermarkButton img.active {
   height: 200px;
   width: 120px;
   border-radius: 25px;
+  transition: transform .2s; /* Animation */
+}
+
+.watermarkButton img.active:hover {
+  transform: scale(2.0);
+  cursor: pointer;
 }
 
 .watermarkButton img.inactive {
@@ -179,6 +216,10 @@ h2 {
   width: 120px;
   border-radius: 25px;
   opacity: 0.5;
+}
+
+.watermarkButton img.inactive:hover {
+  transform: none;
 }
 
 .end-result {
@@ -203,7 +244,7 @@ h2 {
 }
 
 .end-result-image {
-  width: 180px;
+  width: 400px;
   border-radius: 25px;
 }
 
@@ -220,28 +261,30 @@ h2 {
 
 #sample {
   position: absolute;
-  border: 10px solid #FFB30D;
-  border-radius: 50%;
-  width: 400px;
-  height: 500px;
+  width: 500px;
   z-index: 999;
+  border: 10px solid white;
+  color: white;
 }
 
 #sample:hover {
   background: url( "../assets/moveable.png");
   background-repeat: no-repeat;
-  background-size: 300px 300px;
+  background-size: 500px 500px;
   background-position: center;
+  border: 10px solid #FFB30D;
+  border-radius: 10%;
+  color: black;
 }
 
 #sample-title-and-img {
-  padding-left: 100px;
-  padding-top: 50px;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 
 #sample img {
-  width: 180px;
-  height: 300px;
+  width: 400px;
+  height: 667px;
 }
 
 #sample-title {
@@ -250,3 +293,23 @@ h2 {
   letter-spacing: 5pt;
   font-weight: bolder;
 }
+
+.img-container {
+  /* width: 1024px; */
+  height: 768px;
+}
+
+.img-container img {
+  max-width: 100%
+}
+
+.docs-tooltip {
+  font-size: 28pt;
+}
+
+glossary {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+

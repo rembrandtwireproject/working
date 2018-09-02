@@ -1,17 +1,17 @@
 # This skips any bundle install, which Travis will try to do because it sees a Gemfile
 install: true
 
-# This generates thumbnails in each _pages/BRANCH/images/fixedwidth
-script:
-  - find _pages -name "images" -exec ./mk_fixedwidth.sh {} \;
+#addons:
+#  apt:
+#    update: true
+#    packages:
+#      - yamllint
 
-# And this deploys any generated files back to Github
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-  keep-history: true
-  target-branch: master
-  verbose: true
-  on:
-    branch: master
+# This checks the syntax of the site and sends any errors to committer
+script:
+  - ./check-syntax.sh
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always

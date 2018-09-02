@@ -17,7 +17,6 @@ window.onload = function () {
   var dataScaleY = document.getElementById('dataScaleY');
   var options = {
     aspectRatio: 0.6,
-    preview: '.img-preview',
     crop: function (e) {
       var data = e.detail;
 
@@ -83,7 +82,6 @@ window.onload = function () {
 
     cropped = cropper.cropped;
 
-    console.log(data);
     if (data.method) {
       if (typeof data.target !== 'undefined') {
         input = document.querySelector(data.target);
@@ -104,24 +102,16 @@ window.onload = function () {
           }
           break;
 
-        case 'getCroppedCanvas':
-          try {
-            data.option = JSON.parse(data.option);
-          } catch (e) {
-            console.log(e.message);
-          }
-
-          if (uploadedImageType === 'image/jpeg') {
-            if (!data.option) {
-              data.option = {};
-            }
-
-            data.option.fillColor = '#fff';
-          }
-          break;
-
         case 'save':
-          window.location.href= "start.html";
+          var dataURL = cropper.getCroppedCanvas({
+            width: 180,
+            height: 300,
+            fillColor: '#fff',
+            imageSmoothingQuality: 'high',
+          }).toDataURL();
+          sessionStorage.setItem("sample",dataURL);
+
+          window.location.href= "choose_branch.html";
           break;
       }
 
@@ -160,7 +150,6 @@ window.onload = function () {
     }
   };
 
-
   // Import image
   var inputImage = document.getElementById('inputImage');
   inputImage.onchange = function () {
@@ -182,19 +171,34 @@ window.onload = function () {
         cropper.destroy();
         cropper = new Cropper(image, options);
         inputImage.value = null;
-
-        // Get the data url to save in session for the rest of the WIRE pages
-        var canvas = document.createElement("canvas");
-        canvas.width = image.width;
-        canvas.height = image.height;
-        var ctx = canvas.getContext("2d");
-        ctx.drawImage(image, 0, 0);
-        var dataURL = canvas.toDataURL("image/png");
-        sessionStorage.setItem("sample",dataURL);
-
       } else {
         window.alert('Please choose an image file.');
       }
     }
   };
+
+  function chooseImage(event) {
+    image.src = event.target.src;
+
+    cropper.destroy();
+    cropper = new Cropper(image, options);
+
+    var canvas = document.createElement("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var inMemoryImage = new Image();
+    inMemoryImage.src = event.target.src;
+    inMemoryImage.onload = function() {
+      console.log("Setting canvas height to "+inMemoryImage.naturalHeight /* +200 */);
+      canvas.width = inMemoryImage.naturalWidth;
+      canvas.height = inMemoryImage.naturalHeight/* + 200 */;
+      ctx.drawImage(inMemoryImage, 0, 0);
+      var dataURL = canvas.toDataURL();
+      sessionStorage.setItem("sample",dataURL);
+    };
+  }
+
+  for (var sampleImage of document.querySelectorAll('.chooseYourWatermarkButton figure img')) {
+    sampleImage.onclick = chooseImage;
+  }
 };

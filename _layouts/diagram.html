@@ -15,7 +15,7 @@ layout: default
   style="width:1000px; height:600px" frameborder="0"></iframe>
 
 <script>
-  const last = sessionStorage.last;
-  const back = document.getElementById("back");
-  back.href = last.concat(".html");
+  $("#back").click(function() {
+    window.history.back();
+  });
 </script>

@@ -111,6 +111,7 @@ hare:
 horse_and_rider:
   name: Horse and Rider
   image: horse_and_rider
+  start: extend_past_belly
 
   IHP:
     name: IHP

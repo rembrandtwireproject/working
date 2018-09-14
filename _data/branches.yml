@@ -7,10 +7,20 @@ arms_of_amsterdam:
   image: arms_of_amsterdam
   start: feathers_q1
 
+arms_of_baden_hochberg:
+  name: Arms of Baden-Hochberg
+  image: archetype
+  start: top_quad_dip
+
 arms_of_bern:
   name: Arms of Bern
   image: first_image
   start: edgescrolls
+
+arms_of_burgundy_and_austria:
+  name: Arms of Burgundy and Austria
+  image: aab_demo
+  start: sheep_chainline
 
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
@@ -111,6 +121,7 @@ hare:
 horse_and_rider:
   name: Horse and Rider
   image: horse_and_rider
+  start: extend_past_belly
 
   IHP:
     name: IHP
@@ -141,6 +152,7 @@ paschal_lamb:
 phoenix:
   name: Phoenix
   image: phoenix
+  start: wings_downward
 
 posthorn:
   name: Posthorn

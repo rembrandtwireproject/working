@@ -7,6 +7,11 @@ arms_of_amsterdam:
   image: arms_of_amsterdam
   start: feathers_q1
 
+arms_of_baden_hochberg:
+  name: Arms of Baden-Hochberg
+  image: archetype
+  start: top_quad_dip
+
 arms_of_bern:
   name: Arms of Bern
   image: first_image

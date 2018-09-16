@@ -126,6 +126,7 @@ horse_and_rider:
   IHP:
     name: IHP
     image: IHPA.a.a
+    start: IHPperpques
 
 IHS:
   name: IHS
@@ -143,6 +144,7 @@ lion:
 man:
   name: Man
   image: man
+  start: ManQuestion
 
 paschal_lamb:
   name: Paschal Lamb
@@ -169,6 +171,7 @@ pro_patria:
 serpent:
   name: Serpent
   image: SerpentA.a.a
+  start: SerpentWindows
 
 seven_provinces:
   name: Seven Provinces

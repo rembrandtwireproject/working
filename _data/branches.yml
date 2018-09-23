@@ -21,7 +21,7 @@ arms_of_bristol:
    name: Arms of Bristol
    image: archetype
    start: Bisected_"Of"
-    
+
 
 arms_of_burgundy_and_austria:
   name: Arms of Burgundy and Austria
@@ -165,6 +165,7 @@ phoenix:
 posthorn:
   name: Posthorn
   image: posthorn
+  start: centerline
 
 pot:
   name: Pot

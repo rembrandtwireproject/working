@@ -31,7 +31,7 @@ arms_of_burgundy_and_austria:
 arms_of_colbert:
   name: Arms of Colbert
   image:
-  start: 
+  start:
 
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
@@ -179,6 +179,7 @@ pot:
 pro_patria:
   name: Pro Patria
   image: pro_patria
+  start: 
 
 serpent:
   name: Serpent

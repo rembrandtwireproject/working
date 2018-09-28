@@ -30,8 +30,8 @@ arms_of_burgundy_and_austria:
 
 arms_of_colbert:
   name: Arms of Colbert
-  image:
-  start:
+  image: aaa_demo
+  start: crown_past_chainline
 
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
@@ -179,7 +179,7 @@ pot:
 pro_patria:
   name: Pro Patria
   image: pro_patria
-  start: 
+  start: chainline_staff_hat
 
 serpent:
   name: Serpent

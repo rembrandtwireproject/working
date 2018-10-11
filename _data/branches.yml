@@ -133,7 +133,8 @@ foolscap_5_pointed_collar:
 
 grapes:
   name: Grapes
-  image: grapes
+  image: archetype
+  start: bunch_contained_circle
 
 hare:
   name: Hare

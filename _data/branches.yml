@@ -88,6 +88,11 @@ countermark_v:
   image: image1
   start: double_wired
 
+countermark_w:
+  name: Countermark 'W'
+  image: archetype
+  start: chainline_bisect_w
+
 Small_Crosses:
   name: Cross
   image: CrossesA.a.b

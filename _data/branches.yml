@@ -68,6 +68,11 @@ countermark_g:
   image: CNTRMRK-GR2-a
   start: chain_line
 
+countermark_h:
+  name: Countermark 'H'
+  image: archetype
+  start: p_extend_above
+
 countermark_i:
   name: Countermark 'I'
   image:

@@ -20,7 +20,7 @@ arms_of_bern:
 arms_of_bristol:
    name: Arms of Bristol
    image: archetype
-   start: Bisected_"Of"
+   start: Bisected_Of
 
 
 arms_of_burgundy_and_austria:

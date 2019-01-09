@@ -22,7 +22,6 @@ arms_of_bristol:
    image: archetype
    start: Bisected_Of
 
-
 arms_of_burgundy_and_austria:
   name: Arms of Burgundy and Austria
   image: aab_demo

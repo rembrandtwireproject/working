@@ -87,11 +87,6 @@ countermark_n:
   image: countermark_n_option_a
   start: countermark_n_question_1
 
-countermark_r:
-  name: Countermark 'R'
-  image:
-  start: letter_next_R
-
 countermark_v:
   name: Countermark 'V'
   image: image1

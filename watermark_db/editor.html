@@ -29,16 +29,33 @@
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-            <h2 id="title"></h2>
+            <h2 id="mainTitle"></h2>
 
-            <form action="#">
+            <form id="entry-form">
               <h3>Watermark Information</h3>
 
-              <div id="watermark_information">
+              <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_number">
+                <label class="mdl-textfield__label" for="watermark_number">Watermark Number</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_source">
+                <label class="mdl-textfield__label" for="watermark_source">Watermark Source</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="source_image_url"></textarea>
+                <label class="mdl-textfield__label" for="source_image_url">Image URL</label>
               </div>
 
               <hr/>
               <h3>Origin</h3>
+
+              <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="title">
+                <label class="mdl-textfield__label" for="title">Title</label>
+              </div>
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="creation_site">
@@ -95,13 +112,13 @@
               </div>
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="credit_line">
-                <label class="mdl-textfield__label" for="credit_line">Credit Line</label>
+                <input class="mdl-textfield__input" type="text" id="inventory_number">
+                <label class="mdl-textfield__label" for="inventory_number">Inventory Number</label>
               </div>
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="inventory_number">
-                <label class="mdl-textfield__label" for="inventory_number">Inventory Number</label>
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="credit_line"></textarea>
+                <label class="mdl-textfield__label" for="credit_line">Credit Line</label>
               </div>
 
               <hr/>
@@ -149,8 +166,13 @@
               <h4>Image</h4>
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="watermark_image_creator">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="watermark_image_creator"></textarea>
                 <label class="mdl-textfield__label" for="watermark_image_creator">Creator</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="watermark_image_url"></textarea>
+                <label class="mdl-textfield__label" for="watermark_image_url">URL</label>
               </div>
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -163,17 +185,7 @@
                 <label class="mdl-textfield__label" for="watermark_image_type">Type</label>
               </div>
 
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="watermark_image_url">
-                <label class="mdl-textfield__label" for="watermark_image_url">URL</label>
-              </div>
-
               <h4>Classification</h4>
-
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="watermark_description">
-                <label class="mdl-textfield__label" for="watermark_description">Description</label>
-              </div>
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="watermark_hinterding_classification">
@@ -183,6 +195,11 @@
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="watermark_iph_classification">
                 <label class="mdl-textfield__label" for="watermark_iph_classification">IPH Classification</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="watermark_description"></textarea>
+                <label class="mdl-textfield__label" for="watermark_description">Description</label>
               </div>
 
               <h5>Briquet Comparative</h5>
@@ -231,10 +248,14 @@
 
               <h3>Notes</h3>
 
-              <div class="mdl-textfield mdl-js-textfield">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <textarea class="mdl-textfield__input" type="text" rows= "3" id="notes" ></textarea>
                 <label class="mdl-textfield__label" for="notes">Notes...</label>
               </div>
+
+              <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                Save
+              </button>
 
             </form>
           </div>

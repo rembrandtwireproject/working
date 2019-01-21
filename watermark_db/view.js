@@ -3,16 +3,6 @@ var client = new elasticsearch.Client({
   log: 'trace'
 });
 
-client.ping({
-  requestTimeout: 30000,
-}, function (error) {
-  if (error) {
-    console.error('elasticsearch cluster is down!');
-  } else {
-    console.log('All is well');
-  }
-});
-
 // Handy functions
 
 function gridLine(labelText, domOrText) {
@@ -117,3 +107,19 @@ function doEdit(evt) {
 
 var editBtn = document.getElementById("editBtn");
 editBtn.addEventListener("click", doEdit);
+
+function doDelete(evt) {
+  if (window.confirm("Do you really want to delete this entry?")) {
+    client.delete({
+      index: 'watermarks',
+      type: 'doc',
+      id
+    }).then( (resp) => {
+      window.location.href = `/watermark_db/index.html`;
+    });
+  }
+}
+
+var delBtn = document.getElementById("delBtn");
+delBtn.addEventListener("click", doDelete);
+

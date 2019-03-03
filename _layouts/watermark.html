@@ -92,6 +92,35 @@ layout: branch
 
 <br><br>
 
+{% if page.examples %}
+<div class="end-result-examples-prefix">
+  Here are other examples of the same watermark:
+</div>
+<div class="example-board">
+  <img src="/assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px" style="transform:rotate(180deg)"/>
+  {% for example in page.examples %}
+    <div class="example">
+      <img src="/watermark_db/images/watermarks/{{ example.id }}.png" width="200px"/>
+      <p id="caption-{{ example.id }}"></p>
+      <script>
+        fetch("/watermark_db/data/{{ example.id }}.json").then(function (response) {
+          return response.json();
+        })
+        .then(function (watermarkJson) {
+          let captionP = document.getElementById("caption-{{ example.id }}");
+          captionP.appendChild(document.createTextNode(watermarkJson.title + ", "));
+          captionP.appendChild(document.createTextNode(watermarkJson.inventor + ", "));
+          captionP.appendChild(document.createTextNode(watermarkJson.date_of_original_work + ", "));
+          captionP.appendChild(document.createTextNode(watermarkJson.medium_technique + ", "));
+          captionP.appendChild(document.createTextNode(watermarkJson.owner + ", "));
+          captionP.appendChild(document.createTextNode(watermarkJson.inventory_number));
+        });
+      </script>
+    </div>
+  {% endfor %}
+  <img src="/assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px"/>
+</div>
+{% else %}
 <div class="end-result-examples-prefix">
   The watermark can be found on the following print(s):
 </div>
@@ -119,6 +148,8 @@ layout: branch
     <div class="col-md-2"></div>
   </div>
 </div>
+{% endif %}
+
 
 <center>
   {% if diagram != "disabled" %}

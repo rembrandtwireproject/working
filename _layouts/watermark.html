@@ -97,13 +97,13 @@ layout: branch
   Here are other examples of the same watermark:
 </div>
 <div class="example-board">
-  <img src="/assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px" style="transform:rotate(180deg)"/>
+  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px" style="transform:rotate(180deg)"/>
   {% for example in page.examples %}
     <div class="example">
-      <img src="/watermark_db/images/watermarks/{{ example.id }}.png" width="200px"/>
+      <img src="../watermark_db/images/watermarks/{{ example.id }}.png" width="200px"/>
       <p id="caption-{{ example.id }}"></p>
       <script>
-        fetch("/watermark_db/data/{{ example.id }}.json").then(function (response) {
+        fetch("../watermark_db/data/{{ example.id }}.json").then(function (response) {
           return response.json();
         })
         .then(function (watermarkJson) {
@@ -118,7 +118,7 @@ layout: branch
       </script>
     </div>
   {% endfor %}
-  <img src="/assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px"/>
+  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px"/>
 </div>
 {% else %}
 <div class="end-result-examples-prefix">

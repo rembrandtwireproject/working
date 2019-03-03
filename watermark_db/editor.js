@@ -1,5 +1,5 @@
 var client = new elasticsearch.Client({
-  host: '128.84.9.40:9200',
+  host: '128.84.8.97:9200',
   // log: 'trace'
 });
 
@@ -38,7 +38,7 @@ document.getElementById("watermark_number").focus();
 if (fromId) {
   client.get({
     index: "watermarks",
-    type: 'doc',
+    type: '_doc',
     id: fromId
   }).then( (resp) => {
     var entry = resp._source;

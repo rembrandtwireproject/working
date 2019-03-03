@@ -1,5 +1,5 @@
 var client = new elasticsearch.Client({
-  host: '128.84.9.40:9200',
+  host: '128.84.8.97:9200',
   log: 'trace'
 });
 

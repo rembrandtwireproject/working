@@ -100,7 +100,7 @@ layout: branch
   <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px" style="transform:rotate(180deg)"/>
   {% for example in page.examples %}
     <div class="example">
-      <img src="../watermark_db/images/watermarks/{{ example.id }}.png" width="200px"/>
+      <img src="../watermark_db/images/watermarks/{{ example.id }}.png" width="300px"/>
       <p id="caption-{{ example.id }}"></p>
       <script>
         fetch("../watermark_db/data/{{ example.id }}.json").then(function (response) {
@@ -108,11 +108,16 @@ layout: branch
         })
         .then(function (watermarkJson) {
           let captionP = document.getElementById("caption-{{ example.id }}");
-          captionP.appendChild(document.createTextNode(watermarkJson.title + ", "));
-          captionP.appendChild(document.createTextNode(watermarkJson.inventor + ", "));
-          captionP.appendChild(document.createTextNode(watermarkJson.date_of_original_work + ", "));
-          captionP.appendChild(document.createTextNode(watermarkJson.medium_technique + ", "));
-          captionP.appendChild(document.createTextNode(watermarkJson.owner + ", "));
+          captionP.appendChild(document.createTextNode(watermarkJson.title));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.inventor));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.date_of_original_work));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.medium_technique));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.owner));
+          captionP.appendChild(document.createElement("br"));
           captionP.appendChild(document.createTextNode(watermarkJson.inventory_number));
         });
       </script>

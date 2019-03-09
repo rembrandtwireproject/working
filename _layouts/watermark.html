@@ -93,14 +93,21 @@ layout: branch
 <br><br>
 
 {% if page.examples %}
-<div class="end-result-examples-prefix">
-  Here are other examples of the same watermark:
+<div class="end-result-examples-prefix" style="margin-bottom:10px;font-family:Avenir;text-transform:uppercase;font-size:16pt; letter-spacing:5pt;font-weight:bolder;">
+  Other examples of your watermark
 </div>
+<center>
+  <svg width="700" height="25" xmlns="http://www.w3.org/2000/svg">
+    <line stroke-linecap="undefined" stroke-linejoin="undefined" stroke-dasharray="5,5" id="svg_2" y2="12" x2="0"
+      y1="12" x1="700" stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none" />
+  </svg>
+</center>
 <div class="example-board">
-  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px" style="transform:rotate(180deg)"/>
+  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px" style="transform:rotate(180deg)"/>
   {% for example in page.examples %}
     <div class="example">
       <img src="../watermark_db/images/watermarks/{{ example.id }}.png" width="300px"/>
+      <br/><br/>
       <p id="caption-{{ example.id }}"></p>
       <script>
         fetch("../watermark_db/data/{{ example.id }}.json").then(function (response) {
@@ -123,35 +130,7 @@ layout: branch
       </script>
     </div>
   {% endfor %}
-  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="50px"/>
-</div>
-{% else %}
-<div class="end-result-examples-prefix">
-  The watermark can be found on the following print(s):
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-2"></div>
-
-    <div class="col-md-8">
-      <ul>
-        {% for prnt in page.prints %}
-        <li>
-          <i>{{ prnt.title }}</i>, {{ prnt.details }}.
-          {% if prnt.notes %}
-            <p><strong>NOTE:</strong> {{ prnt.notes }}</p>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-      {% if page.hinterding %}
-        <p>(Erik Hinterding, <i>Rembrandt as an Etcher</i>, 2006, II, {{ page.hinterding }})</p>
-      {% endif %}
-    </div>
-
-    <div class="col-md-2"></div>
-  </div>
+  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px"/>
 </div>
 {% endif %}
 

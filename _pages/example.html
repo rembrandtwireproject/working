@@ -87,8 +87,8 @@ layout: default
   }
 
   // Extract id from url
-  var thisUrl = window.location.href;
-  var id = thisUrl.split("/").pop();
+  let params = (new URL(document.location)).searchParams;
+  let id = params.get("id");
 
   fetch("../watermark_db/data/" + id + ".json")
   .then((response) => response.json())

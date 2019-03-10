@@ -106,7 +106,9 @@ layout: branch
   <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px" style="transform:rotate(180deg)"/>
   {% for example in page.examples %}
     <div class="example">
-      <img src="../watermark_db/images/watermarks/{{ example.id }}.png" width="300px"/>
+      <a href="../../example.html/{{ example.id }}">
+        <img src="../watermark_db/images/watermarks/{{ example.id }}.png" width="300px"/>
+      </a>
       <br/><br/>
       <p id="caption-{{ example.id }}"></p>
       <script>

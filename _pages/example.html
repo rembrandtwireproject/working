@@ -90,17 +90,17 @@ layout: default
   let params = (new URL(document.location)).searchParams;
   let id = params.get("id");
 
-  fetch("../watermark_db/data/" + id + ".json")
+  fetch("watermark_db/data/" + id + ".json")
   .then((response) => response.json())
   .then((resp) => {
     var entry = resp;
     document.getElementById("title").textContent = entry.title;
 
     var sourceImage = document.getElementById("sourceImage");
-    sourceImage.style.background = `url(../watermark_db/images/sources/${id}.png) center / cover`;
+    sourceImage.style.background = `url(watermark_db/images/sources/${id}.png) center / cover`;
 
     var watermarkImage = document.getElementById("watermarkImage");
-    watermarkImage.style.background = `url(../watermark_db/images/watermarks/${id}.png) center / cover`;
+    watermarkImage.style.background = `url(watermark_db/images/watermarks/${id}.png) center / cover`;
 
     var tab1 = document.getElementById("tab1");
     tab1.appendChild(gridLine("ID", `#${entry.watermark_number}, ${entry.watermark_source}`));

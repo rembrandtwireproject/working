@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Watermark Database Editor</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+    <link rel="stylesheet" href="/watermark_db/styles.css">
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">WIRE Watermark Database</span>
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="/watermark_db/index.html"><i class="material-icons">home</i></a>
+            <a class="mdl-navigation__link" href="/watermark_db/editor.html/new"><i class="material-icons">add</i></a>
+          </nav>
+        </div>
+      </header>
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <h2 id="mainTitle"></h2>
+
+            <form id="entry-form">
+              <h3>Watermark Information</h3>
+
+              <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_number">
+                <label class="mdl-textfield__label" for="watermark_number">Watermark Number</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_source">
+                <label class="mdl-textfield__label" for="watermark_source">Watermark Source</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="source_image_url"></textarea>
+                <label class="mdl-textfield__label" for="source_image_url">Image URL</label>
+              </div>
+
+              <hr/>
+              <h3>Origin</h3>
+
+              <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="title">
+                <label class="mdl-textfield__label" for="title">Title</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="creation_site">
+                <label class="mdl-textfield__label" for="creation_site">Creation Site</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="inventor">
+                <label class="mdl-textfield__label" for="inventor">Inventor</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="date_of_original_work">
+                <label class="mdl-textfield__label" for="date_of_original_work">Date of Original Work</label>
+              </div>
+
+              <h4>Bartsch/White and Boon</h4>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="bartsch_classification">
+                <label class="mdl-textfield__label" for="bartsch_classification">Classification</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="bartsch_state">
+                <label class="mdl-textfield__label" for="bartsch_state">State</label>
+              </div>
+
+              <h4>New Hollstein</h4>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="new_hollstein_classification">
+                <label class="mdl-textfield__label" for="new_hollstein_classification">Classification</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="new_hollstein_state">
+                <label class="mdl-textfield__label" for="new_hollstein_state">State</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="other_catalogue_number">
+                <label class="mdl-textfield__label" for="other_catalogue_number">Other Catalogue Number</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="subject">
+                <label class="mdl-textfield__label" for="subject">Subject</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="owner">
+                <label class="mdl-textfield__label" for="owner">Owner</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="inventory_number">
+                <label class="mdl-textfield__label" for="inventory_number">Inventory Number</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="credit_line"></textarea>
+                <label class="mdl-textfield__label" for="credit_line">Credit Line</label>
+              </div>
+
+              <hr/>
+              <h3>Paper</h3>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="paper_type">
+                <label class="mdl-textfield__label" for="paper_type">Type</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="paper_measurements">
+                <label class="mdl-textfield__label" for="paper_measurements">Measurements</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="paper_size">
+                <label class="mdl-textfield__label" for="paper_size">Size or Format</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="paper_presumed_origin">
+                <label class="mdl-textfield__label" for="paper_presumed_origin">Presumed Origin</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="paper_mill">
+                <label class="mdl-textfield__label" for="paper_mill">Mill</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="paper_maker">
+                <label class="mdl-textfield__label" for="paper_maker">Maker</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_side">
+                <label class="mdl-textfield__label" for="watermark_side">Watermark Side</label>
+              </div>
+
+
+              <hr/>
+              <h3>Watermark</h3>
+
+              <h4>Image</h4>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="watermark_image_creator"></textarea>
+                <label class="mdl-textfield__label" for="watermark_image_creator">Creator</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="watermark_image_url"></textarea>
+                <label class="mdl-textfield__label" for="watermark_image_url">URL</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_image_date">
+                <label class="mdl-textfield__label" for="watermark_image_date">Date</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_image_type">
+                <label class="mdl-textfield__label" for="watermark_image_type">Type</label>
+              </div>
+
+              <h4>Classification</h4>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_hinterding_classification">
+                <label class="mdl-textfield__label" for="watermark_hinterding_classification">Hinterding Classification</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_iph_classification">
+                <label class="mdl-textfield__label" for="watermark_iph_classification">IPH Classification</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="watermark_description"></textarea>
+                <label class="mdl-textfield__label" for="watermark_description">Description</label>
+              </div>
+
+              <h5>Briquet Comparative</h5>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_briquet_description">
+                <label class="mdl-textfield__label" for="watermark_briquet_description">Description</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_briquet_number">
+                <label class="mdl-textfield__label" for="watermark_briquet_number">Number</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_measurements">
+                <label class="mdl-textfield__label" for="watermark_measurements">Measurements</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_location_on_sheet">
+                <label class="mdl-textfield__label" for="watermark_location_on_sheet">Location on Sheet</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_twinmark">
+                <label class="mdl-textfield__label" for="watermark_twinmark">Twinmark</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_equivalent_groups">
+                <label class="mdl-textfield__label" for="watermark_equivalent_groups">Equivalent Groups</label>
+              </div>
+
+              <h4>Dating</h4>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_proposed_date">
+                <label class="mdl-textfield__label" for="watermark_proposed_date">Proposed</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="watermark_dating_deduction_basis">
+                <label class="mdl-textfield__label" for="watermark_dating_deduction_basis">Deduction Basis</label>
+              </div>
+
+              <h3>Notes</h3>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea class="mdl-textfield__input" type="text" rows= "3" id="notes" ></textarea>
+                <label class="mdl-textfield__label" for="notes">Notes...</label>
+              </div>
+
+              <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                Save
+              </button>
+
+            </form>
+          </div>
+        </div>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy and Terms</a></li>
+              <li><a href="#">User Agreement</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="/assets/elasticsearch.min.js"></script>
+    <script src="/watermark_db/editor.js"></script>
+  </body>
+</html>

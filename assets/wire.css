@@ -313,3 +313,7 @@ glossary {
   text-decoration: underline;
 }
 
+.example-board {
+  display: flex;
+  justify-content: space-around;
+}

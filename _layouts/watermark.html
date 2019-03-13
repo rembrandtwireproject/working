@@ -92,33 +92,50 @@ layout: branch
 
 <br><br>
 
-<div class="end-result-examples-prefix">
-  The watermark can be found on the following print(s):
+{% if page.examples %}
+<div class="end-result-examples-prefix" style="margin-bottom:10px;font-family:Avenir;text-transform:uppercase;font-size:16pt; letter-spacing:5pt;font-weight:bolder;">
+  Other examples of your watermark
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-2"></div>
-
-    <div class="col-md-8">
-      <ul>
-        {% for prnt in page.prints %}
-        <li>
-          <i>{{ prnt.title }}</i>, {{ prnt.details }}.
-          {% if prnt.notes %}
-            <p><strong>NOTE:</strong> {{ prnt.notes }}</p>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-      {% if page.hinterding %}
-        <p>(Erik Hinterding, <i>Rembrandt as an Etcher</i>, 2006, II, {{ page.hinterding }})</p>
-      {% endif %}
+<center>
+  <svg width="700" height="25" xmlns="http://www.w3.org/2000/svg">
+    <line stroke-linecap="undefined" stroke-linejoin="undefined" stroke-dasharray="5,5" id="svg_2" y2="12" x2="0"
+      y1="12" x1="700" stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none" />
+  </svg>
+</center>
+<div class="example-board">
+  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px" style="transform:rotate(180deg)"/>
+  {% for example in page.examples %}
+    <div class="example">
+      <a href="../example.html?id={{ example.id }}">
+        <img src="../watermark_db/images/watermarks/{{ example.id }}.png" width="300px"/>
+      </a>
+      <br/><br/>
+      <p id="caption-{{ example.id }}"></p>
+      <script>
+        fetch("../watermark_db/data/{{ example.id }}.json").then(function (response) {
+          return response.json();
+        })
+        .then(function (watermarkJson) {
+          let captionP = document.getElementById("caption-{{ example.id }}");
+          captionP.appendChild(document.createTextNode(watermarkJson.title));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.inventor));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.date_of_original_work));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.medium_technique));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.owner));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.inventory_number));
+        });
+      </script>
     </div>
-
-    <div class="col-md-2"></div>
-  </div>
+  {% endfor %}
+  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px"/>
 </div>
+{% endif %}
+
 
 <center>
   {% if diagram != "disabled" %}

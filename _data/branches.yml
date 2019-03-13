@@ -87,6 +87,11 @@ countermark_n:
   image: countermark_n_option_a
   start: countermark_n_question_1
 
+countermark_p
+  name: Countermark 'P'
+  image:
+  start: chain_line_mid
+
 countermark_v:
   name: Countermark 'V'
   image: image1

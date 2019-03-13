@@ -1,0 +1,155 @@
+---
+layout: default
+---
+
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+<link rel="stylesheet" href="/watermark_db/styles.css">
+
+<div class="demo-container mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+
+    <h2 id="title"></h2>
+
+    <style>
+      .source {
+        width: 256px;
+        height: 256px;
+      }
+    </style>
+
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="backBtn">
+      Back to Your Watermark
+    </button>
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col">
+        <div class="source" id="sourceImage"> </div>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col">
+        <div class="source" id="watermarkImage"> </div>
+      </div>
+    </div>
+
+    <div class="mdl-tabs mdl-js-tabs">
+      <div class="mdl-tabs__tab-bar">
+        <a href="#tab1" class="mdl-tabs__tab is-active">Identification</a>
+        <a href="#tab2" class="mdl-tabs__tab">Paper</a>
+        <a href="#tab3" class="mdl-tabs__tab">Watermark</a>
+        <a href="#tab4" class="mdl-tabs__tab">Notes</a>
+      </div>
+
+      <div class="mdl-tabs__panel is-active" id="tab1">
+      </div>
+
+      <div class="mdl-tabs__panel" id="tab2">
+      </div>
+
+      <div class="mdl-tabs__panel" id="tab3">
+      </div>
+
+      <div class="mdl-tabs__panel" id="tab4">
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script>
+  // Handy functions
+
+  function gridLine(labelText, domOrText) {
+    var grid = document.createElement("div");
+    grid.className = "mdl-grid";
+
+    var label = document.createElement("div");
+    label.className = "mdl-cell mdl-cell--2-col";
+    label.textContent = labelText;
+    grid.appendChild(label);
+
+    var data = document.createElement("div");
+    data.className = "mdl-cell mdl-cell--10-col";
+    if (domOrText instanceof Element) {
+      data.appendChild(domOrText);
+    } else {
+      var strongCell = document.createElement("strong");
+      strongCell.textContent = domOrText;
+      data.appendChild(strongCell);
+    }
+
+    grid.appendChild(data);
+    return grid;
+  }
+
+  // Extract id from url
+  let params = (new URL(document.location)).searchParams;
+  let id = params.get("id");
+
+  fetch("watermark_db/data/" + id + ".json")
+  .then((response) => response.json())
+  .then((resp) => {
+    var entry = resp;
+    document.getElementById("title").textContent = entry.title;
+
+    var sourceImage = document.getElementById("sourceImage");
+    sourceImage.style.background = `url(watermark_db/images/sources/${id}.png) center / cover`;
+
+    var watermarkImage = document.getElementById("watermarkImage");
+    watermarkImage.style.background = `url(watermark_db/images/watermarks/${id}.png) center / cover`;
+
+    var tab1 = document.getElementById("tab1");
+    tab1.appendChild(gridLine("ID", `#${entry.watermark_number}, ${entry.watermark_source}`));
+    tab1.appendChild(gridLine("Origin", `${entry.creation_site}, ${entry.inventor}, ${entry.date_of_original_work}`));
+    tab1.appendChild(gridLine("Bartsch/White and Boon", `${entry.bartsch_classification}, ${entry.bartsch_state}`));
+    tab1.appendChild(gridLine("New Hollstein", `${entry.new_hollstein_classification}, ${entry.new_hollstein_state}`));
+    if (entry.other_catalogue_number) {
+      tab1.appendChild(gridLine("Other Catalogue", `${entry.other_catalogue_number}`));
+    }
+    if (entry.subject) {
+      tab1.appendChild(gridLine("Subject", `${entry.subject}`));
+    }
+    var owner_div = document.createElement("div");
+    var strongCell = document.createElement("strong");
+    strongCell.textContent = `${entry.owner} Inventory Number ${entry.inventory_number}`;
+    owner_div.appendChild(strongCell);
+    owner_div.appendChild(document.createElement("br"));
+    owner_div.appendChild(document.createTextNode(entry.credit_line));
+    tab1.appendChild(gridLine("Owner", owner_div));
+
+    var tab2 = document.getElementById("tab2");
+    tab2.appendChild(gridLine("Type", entry.paper_type));
+    tab2.appendChild(gridLine("Size", `${entry.paper_size_or_format}, ${entry.paper_measurements}`));
+    tab2.appendChild(gridLine("Presumed Origin", `${entry.paper_presumed_origin} ${entry.paper_mill} ${entry.paper_maker}`));
+
+    var tab3 = document.getElementById("tab3");
+    tab3.appendChild(gridLine("Side and Location", `${entry.watermark_side} ${entry.watermark_location_on_sheet}`));
+    tab3.appendChild(gridLine("Source", `${entry.watermark_image_type}, ${entry.watermark_image_creator}, ${entry.watermark_image_date}`));
+    tab3.appendChild(gridLine("Description", entry.watermark_description));
+    tab3.appendChild(gridLine("Hinterding Classification", entry.watermark_hinterding_classification));
+    tab3.appendChild(gridLine("IPH Classification", entry.watermark_iph_classification));
+    tab3.appendChild(gridLine("Briquet", `${entry.watermark_briquet_number} ${entry.watermark_briquet_description}`));
+    tab3.appendChild(gridLine("Measurements", entry.watermark_measurements));
+    tab3.appendChild(gridLine("Twinmark", entry.watermark_twinmark));
+    tab3.appendChild(gridLine("Equivalent Groups", entry.watermark_equivalent_groups));
+    var date_div = document.createElement("div");
+    var strongCell = document.createElement("strong");
+    strongCell.textContent = entry.watermark_proposed_date;
+    date_div.appendChild(strongCell);
+    date_div.appendChild(document.createElement("br"));
+    date_div.appendChild(document.createTextNode(`Based on ${entry.watermark_dating_deduction_basis}`));
+    tab3.appendChild(gridLine("Proposed Date", date_div));
+
+    var tab4 = document.getElementById("tab4");
+    var notes = document.createElement("p");
+    notes.textContent = entry.notes;
+    tab4.appendChild(notes);
+  });
+
+  var backBtn = document.getElementById("backBtn");
+  backBtn.addEventListener("click", () => window.history.back());
+</script>

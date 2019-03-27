@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/wire.css">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/index.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/tipped-4.6.1-light/css/tipped/tipped.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/tipped-4.6.1-light/js/tipped/tipped.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+    <title>Watermark Project</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <a href="{{ site.baseurl }}/"><img id="logo" src="{{ site.baseurl }}/assets/wire_logo.png" alt="Cornell WIRE logo"> </a>
+    </div>
+
+    <nav>
+      <ul class="wirenav justify-content-center">
+        <li>
+          {% if page.path == "_pages/index.html" %}
+            <img src="{{ site.baseurl }}/assets/linkImage.png" height="50px" />
+          {% else %}
+            <a href="{{ site.baseurl }}/">Home</a>
+          {% endif %}
+        </li>
+        <li>
+          {% if page.path == "_pages/choose_user_image.html" %}
+            <img src="{{ site.baseurl }}/assets/linkImage.png" height="50px" />
+          {% else %}
+            <a href="{{ site.baseurl }}/choose_user_image.html">Decision Tree</a>
+          {% endif %}
+        </li>
+        <li>
+          {% if page.path == "_pages/team.html" %}
+            <img src="{{ site.baseurl }}/assets/linkImage.png" height="50px" />
+          {% else %}
+            <a href="{{ site.baseurl }}/team.html">Team</a>
+          {% endif %}
+        </li>
+        <li>
+          {% if page.path == "_pages/about.html" %}
+            <img src="{{ site.baseurl }}/assets/linkImage.png" height="50px" />
+          {% else %}
+            <a href="{{ site.baseurl }}/about.html">About</a>
+          {% endif %}
+        </li>
+      </ul>
+    </nav>
+    {{ content }}
+    <div class= "container-fluid footer">
+      <p style="color:white;">Herbert F. Johnson Museum of Art, Cornell University</p>
+    </div>
+  </body>
+</html>

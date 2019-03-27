@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="text">
+  <h2>Identify your watermark</h2>
+
+  <div class="text-center">
+  There are many different types of watermarks; these types can further be divided in variants and subvariants. Match your own watermark image, on the left, to one of the general watermark types below. Once you have selected the type, you will answer the following yes / no questions to establish exactly which watermark variant and subvariant is on your print. Click below to start.
+  </div>
+
+  <br/>
+  <br/><br/>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div id="sample-title-and-img">
+        <span id="sample-title">Your<br/>Watermark</span>
+        <br/>
+        <img id="sampleImage">
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="d-flex flex-row justify-content-center flex-wrap"
+        style="padding-left:40px;padding-top:100px;padding-right:40px;overflow:scroll;height:500px"
+      >
+        {% for branch in site.data.branches %}
+          <div class="p-2 watermarkButton">
+            <figure>
+              {% if branch[1].start %}
+                <a href="{{ site.baseurl }}/{{ branch[0] }}/{{ branch[1].start }}.html">
+                  <img src="{{ site.baseurl }}/{{ branch[0] }}/images/archetype.png" class="active">
+                </a>
+              {% else %}
+                <img src="{{ site.baseurl }}/{{ branch[0] }}/images/archetype.png" class="inactive">
+              {% endif %}
+              <figcaption>{{ branch[1].name }}</figcaption>
+            </figure>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const sampleImage = sessionStorage.getItem("sample");
+  const sampleImageTag = $("#sampleImage")[0];
+  sampleImageTag.src = sampleImage;
+</script>

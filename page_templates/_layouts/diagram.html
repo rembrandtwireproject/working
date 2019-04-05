@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% assign url_elts = page.path | split: "/" %}
+{% assign branch_pos = url_elts | size | minus: 2 %}
+{% assign branch_slug = url_elts[branch_pos] %}
+{% assign branch_name = site.data.branches[branch_slug].name %}
+
+<h3>
+  {{ branch_name }} — Diagram
+</h3>
+<a class="button" id="back">↩ Back to last step</a>
+<iframe src="{{ branch_slug }}.pdf"
+  style="width:1000px; height:600px" frameborder="0"></iframe>
+
+<script>
+  $("#back").click(function() {
+    window.history.back();
+  });
+</script>

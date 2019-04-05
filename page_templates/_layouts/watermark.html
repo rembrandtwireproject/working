@@ -1,0 +1,159 @@
+---
+layout: branch
+---
+
+{% assign slug = page.path | split: "/" | last | split: "." | pop | join: "." %}
+{% assign url_elts = page.path | split: "/" %}
+{% assign branch_pos = url_elts | size | minus: 2 %}
+{% assign branch_slug = url_elts[branch_pos] %}
+{% assign diagram = site.data.branches[branch_slug].diagram %}
+
+<center>
+  <table style="margin-top: -20px">
+    <tr>
+      <td colspan="2">
+        <svg width="530" height="100" xmlns="http://www.w3.org/2000/svg">
+          <line
+            stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1"
+            y1="-10" x1="10" y2="110" x2="60"
+            stroke-width="20" stroke="#000" fill="none"
+          />
+        </svg>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="end-result">
+          <span class="end-result-prefix">Your watermark is</span>
+          {{ page.name }}
+        </div>
+      </td>
+
+      <td>
+        <svg width="230" height="300" xmlns="http://www.w3.org/2000/svg">
+          <line stroke-linecap="undefined" stroke-linejoin="undefined" stroke-dasharray="5,5" id="svg_2"
+            y2="35" x2="180.5" y1="82" x1="0.5"
+            stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none"/>
+          <ellipse ry="8" rx="8" id="svg_4" cy="22.5" cx="203"
+            stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none"/>
+        </svg>
+      </td>
+    </tr>
+  </table>
+</center>
+
+<br><br>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3 ">
+      <div id="sample-title-and-img">
+        <span id="sample-title" class="pull-right">Your<br/>Watermark</span>
+        <br/>
+        <a class="magnifier-thumb-wrapper" class="pull-right" style="width:300px">
+          <img id="sampleImage" style="width:300px">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <center>
+        <a class="magnifier-thumb-wrapper" style="width:600px">
+          <img id ="thumb-inside" src="images/{{ slug }}.png" alt="{{ slug }}" class="end-result-image">
+        </a>
+        <script>
+          m.attach({
+            thumb: '#thumb-inside',
+            large: "images/{{ slug }}.png",
+            mode: 'inside',
+            zoom: 2,
+            zoomable: true
+          });
+        </script>`
+      </center>
+    </div>
+
+    <div class="col-md-3 end-result-explanation" >
+      {{ page.clarification }}
+      {% if page.datable %}
+        This paper is datable to {{ page.datable }}.
+      {% endif %}
+
+      <a class="btn btn-primary btn-upload" href="mailto:Andrew Weislogel <aw27@cornell.edu>">
+        Not Your Watermark?
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+<br><br>
+
+{% if page.examples %}
+<div class="end-result-examples-prefix" style="margin-bottom:10px;font-family:Avenir;text-transform:uppercase;font-size:16pt; letter-spacing:5pt;font-weight:bolder;">
+  Other examples of your watermark
+</div>
+<center>
+  <svg width="700" height="25" xmlns="http://www.w3.org/2000/svg">
+    <line stroke-linecap="undefined" stroke-linejoin="undefined" stroke-dasharray="5,5" id="svg_2" y2="12" x2="0"
+      y1="12" x1="700" stroke-opacity="null" stroke-width="5" stroke="#FFB30D" fill="none" />
+  </svg>
+</center>
+<div class="example-board">
+  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px" style="transform:rotate(180deg)"/>
+  {% for example in page.examples %}
+    <div class="example">
+      <a href="../example.html?id={{ example.id }}">
+        <img src="../watermark_db/images/watermarks/{{ example.id }}.png" width="300px"/>
+      </a>
+      <br/><br/>
+      <p id="caption-{{ example.id }}"></p>
+      <script>
+        fetch("../watermark_db/data/{{ example.id }}.json").then(function (response) {
+          return response.json();
+        })
+        .then(function (watermarkJson) {
+          let captionP = document.getElementById("caption-{{ example.id }}");
+          captionP.appendChild(document.createTextNode(watermarkJson.title));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.inventor));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.date_of_original_work));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.medium_technique));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.owner));
+          captionP.appendChild(document.createElement("br"));
+          captionP.appendChild(document.createTextNode(watermarkJson.inventory_number));
+        });
+      </script>
+    </div>
+  {% endfor %}
+  <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px"/>
+</div>
+{% endif %}
+
+
+<center>
+  {% if diagram != "disabled" %}
+    <a class="button" href="diagram.html">Diagram</a>
+  {% endif %}
+  <a class="button" href="{{ site.data.branches[branch_slug].start }}.html">↻ Restart</a>
+</center>
+
+<script>
+  const sampleImage = sessionStorage.getItem("sample");
+  const sampleImageTag = $("#sampleImage")[0];
+  sampleImageTag.src = sampleImage;
+
+  m2.attach({
+    thumb: '#sampleImage',
+    large: sampleImage,
+    mode: 'inside',
+    zoom: 2,
+    zoomable: true
+  });
+</script>

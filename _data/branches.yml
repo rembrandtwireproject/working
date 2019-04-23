@@ -92,6 +92,12 @@ countermark_p:
   image:
   start: chain_line_mid
 
+countermark_r:
+  name: Countermark 'R'
+  image: Rab
+  start: letter_next_R
+
+
 countermark_v:
   name: Countermark 'V'
   image: image1

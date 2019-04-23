@@ -95,7 +95,7 @@ countermark_p:
 countermark_r:
   name: Countermark 'R'
   image: Rab
-  start: letter_next_r
+  start: letter_next_R
 
 
 countermark_v:

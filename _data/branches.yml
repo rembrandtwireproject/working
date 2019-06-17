@@ -57,6 +57,11 @@ countermark_a:
   image: image1
   start: three_letters
 
+countermark_d:
+  name: Countermark 'D'
+  image: archetype
+  start: g_next_d
+
 countermark_f:
   name: Countermark 'F'
   image: option_d

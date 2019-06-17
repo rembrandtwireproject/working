@@ -154,6 +154,7 @@ grapes:
 hare:
   name: Hare
   image: hare
+  start: word_dehaes
 
 horse_and_rider:
   name: Horse and Rider

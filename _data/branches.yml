@@ -155,7 +155,7 @@ foolscap_5_pointed_collar:
 foolscap_7_pointed_collar:
   name: Foolscap with Seven-Pointed Collar
   image:
-  start: 
+  start:
 
 grapes:
   name: Grapes
@@ -184,7 +184,8 @@ IHS:
 
 kings_head:
   name: King’s Head
-  image: kings_head
+  image: archetype
+  start: Aa
 
 lion:
   name: Lion

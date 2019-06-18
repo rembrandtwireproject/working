@@ -1,6 +1,7 @@
 anchor:
   name: Anchor
   image: archetype
+  start: Aa
 
 arms_of_amsterdam:
   name: Arms of Amsterdam

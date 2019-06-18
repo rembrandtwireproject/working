@@ -87,6 +87,11 @@ countermark_l:
   image: cntr_l_example
   start: followedby_b
 
+countermark_m:
+  name: Countermark 'M'
+  image: archetype
+  start: four_leaf
+
 countermark_n:
   name: Countermark 'N'
   image: countermark_n_option_a

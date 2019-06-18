@@ -240,6 +240,7 @@ strasbourg_lily:
 wheel:
   name: Wheel
   image: wheel
+  start: Aa
 
 words:
   name: Words

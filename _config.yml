@@ -31,6 +31,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
 
 # This allows us to build the decision tree underneath the _pages folder, similar
 # to the old site.  See https://github.com/jekyll/jekyll/issues/920

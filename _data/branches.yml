@@ -154,7 +154,7 @@ foolscap_5_pointed_collar:
 
 foolscap_7_pointed_collar:
   name: Foolscap with Seven-Pointed Collar
-  image: foolscap7
+  image: archetype
   start: balls_equal
 
 grapes:

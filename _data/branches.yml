@@ -33,6 +33,11 @@ arms_of_colbert:
   image: aaa_demo
   start: crown_past_chainline
 
+arms_of_england:
+  name: Arms of England
+  image: england
+  start: A2a
+
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
   image: Ab

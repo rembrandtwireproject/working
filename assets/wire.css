@@ -317,3 +317,7 @@ glossary {
   display: flex;
   justify-content: space-around;
 }
+
+#openseadragon-watermark {
+  border: 5px solid black;
+}

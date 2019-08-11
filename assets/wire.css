@@ -318,6 +318,10 @@ glossary {
   justify-content: space-around;
 }
 
-#openseadragon-watermark {
+#openseadragon-your-image {
+  border: 5px solid black;
+}
+
+#openseadragon-reference-image {
   border: 5px solid black;
 }

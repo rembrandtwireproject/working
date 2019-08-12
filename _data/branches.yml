@@ -219,6 +219,7 @@ posthorn:
 pot:
   name: Pot
   image: pot
+  start: Aa
 
 pro_patria:
   name: Pro Patria
@@ -238,6 +239,7 @@ seven_provinces:
 star:
   name: Star
   image: star
+  start:
 
 strasbourg_bend:
   name: Strasbourg Bend

@@ -48,6 +48,11 @@ arms_of_france:
   image: archetype
   start: Aa
 
+arms_of_kyburg:
+  name: Arms of Kyburg
+  image: archetype
+  start: A2a
+
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
   image: Ab

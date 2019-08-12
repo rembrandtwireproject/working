@@ -43,6 +43,11 @@ arms_of_england:
   image: archetype
   start: A2a
 
+arms_of_france:
+  name: Arms of France
+  image: archetype
+  start: Aa
+
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
   image: Ab

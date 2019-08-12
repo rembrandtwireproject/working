@@ -94,7 +94,7 @@ countermark_i:
   start: letters_BDR
 
 countermark_j:
-  name: Counteramrk 'J'
+  name: Countermark 'J'
   image: archetype
   start: JBa
 
@@ -113,6 +113,7 @@ countermark_n:
   image: countermark_n_option_a
   start: countermark_n_question_1
 
+countermark_o:
 countermark_p:
   name: Countermark 'P'
   image:

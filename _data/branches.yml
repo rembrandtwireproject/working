@@ -2,7 +2,7 @@
   name: 4HS
   image: archetype
   start: Aa
-  
+
 anchor:
   name: Anchor
   image: archetype
@@ -92,6 +92,11 @@ countermark_i:
   name: Countermark 'I'
   image:
   start: letters_BDR
+
+countermark_j:
+  name: Counteramrk 'J'
+  image: archetype
+  start: JBa
 
 countermark_l:
   name: Countermark 'L'

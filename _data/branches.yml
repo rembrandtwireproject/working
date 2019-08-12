@@ -114,6 +114,9 @@ countermark_n:
   start: countermark_n_question_1
 
 countermark_o:
+  name: Countermark 'O'
+  image: archetype
+  start: OMa
 countermark_p:
   name: Countermark 'P'
   image:

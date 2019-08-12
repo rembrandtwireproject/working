@@ -53,6 +53,11 @@ arms_of_kyburg:
   image: archetype
   start: A2a
 
+arms_of_london:
+  name: Arms of London
+  image: archetype
+  start: Aa
+
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
   image: Ab

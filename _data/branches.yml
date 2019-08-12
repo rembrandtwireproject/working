@@ -252,7 +252,7 @@ strasbourg_lily:
 
 wheel:
   name: Wheel
-  image: wheel
+  image: archetype
   start: Aa
 
 words:

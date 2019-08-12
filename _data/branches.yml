@@ -117,6 +117,7 @@ countermark_o:
   name: Countermark 'O'
   image: archetype
   start: OMa
+  
 countermark_p:
   name: Countermark 'P'
   image:

@@ -35,7 +35,7 @@ arms_of_colbert:
 
 arms_of_england:
   name: Arms of England
-  image: england
+  image: archetype
   start: A2a
 
 arms_of_ravensburg:

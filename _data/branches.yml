@@ -280,6 +280,7 @@ strasbourg_bend:
 strasbourg_lily:
   name: Strasbourg Lily
   image: strasbourg_lily
+  start: crownbands
 
 wheel:
   name: Wheel

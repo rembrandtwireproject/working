@@ -16,7 +16,6 @@ window.onload = function () {
   var dataScaleX = document.getElementById('dataScaleX');
   var dataScaleY = document.getElementById('dataScaleY');
   var options = {
-    aspectRatio: 0.6,
     crop: function (e) {
       var data = e.detail;
 
@@ -32,8 +31,6 @@ window.onload = function () {
   };
   var cropper = new Cropper(image, options);
   var originalImageURL = image.src;
-  var uploadedImageType = 'image/jpeg';
-  var uploadedImageName = 'cropped.jpg';
   var uploadedImageURL;
 
   // Tooltip
@@ -104,8 +101,8 @@ window.onload = function () {
 
         case 'save':
           var dataURL = cropper.getCroppedCanvas({
-            width: 180,
-            height: 300,
+            // width: 180,
+            // height: 300,
             fillColor: '#fff',
             imageSmoothingQuality: 'high',
           }).toDataURL();
@@ -160,9 +157,6 @@ window.onload = function () {
       file = files[0];
 
       if (/^image\/\w+/.test(file.type)) {
-        uploadedImageType = file.type;
-        uploadedImageName = file.name;
-
         if (uploadedImageURL) {
           URL.revokeObjectURL(uploadedImageURL);
         }

@@ -328,7 +328,7 @@ glossary {
 
 .question-grid-container {
   display: grid;
-  grid-template-columns: 425px 425px auto;
+  grid-template-columns: auto 425px auto;
   justify-content: center;
 }
 .your-image-panel {
@@ -343,7 +343,7 @@ glossary {
 
 .watermark-grid-container {
   display: grid;
-  grid-template-columns: 425px 425px auto;
+  grid-template-columns: auto 425px auto;
   justify-content: center;
 }
 .answer-panel {

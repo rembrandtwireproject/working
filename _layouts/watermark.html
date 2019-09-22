@@ -9,7 +9,7 @@ layout: branch
 {% assign diagram = site.data.branches[branch_slug].diagram %}
 
 <div class="watermark-grid-container">
-  <div class="your-image-panel">
+  <div class="your-image-panel" style="display: none">
     <div id="sample-title-and-img">
       <span id="sample-title" >Your Image</span>
       <br/>
@@ -129,14 +129,21 @@ layout: branch
 
 <script src="../assets/openseadragon-bin-2.4.0/openseadragon.min.js"></script>
 <script type="text/javascript">
-  OpenSeadragon({
-    id: "openseadragon-your-image",
-    prefixUrl: "../assets/openseadragon-bin-2.4.0/images/",
-    tileSources: {
-      type: "image",
-      url: sessionStorage.getItem("sample")
-    }
-  });
+  const sampleImage = sessionStorage.getItem("sample");
+  const elem = document.querySelector(".your-image-panel");
+  if (sampleImage) {
+    OpenSeadragon({
+      id: "openseadragon-your-image",
+      prefixUrl: "../assets/openseadragon-bin-2.4.0/images/",
+      tileSources: {
+        type: "image",
+        url: sampleImage
+      }
+    });
+    elem.style.display = "";
+  } else {
+    elem.parentNode.removeChild(elem);
+  }
   OpenSeadragon({
     id: "openseadragon-reference-image",
     prefixUrl: "../assets/openseadragon-bin-2.4.0/images/",

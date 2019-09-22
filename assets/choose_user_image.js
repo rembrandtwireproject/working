@@ -195,4 +195,8 @@ window.onload = function () {
   for (var sampleImage of document.querySelectorAll('.chooseYourWatermarkButton figure img')) {
     sampleImage.onclick = chooseImage;
   }
+  this.document.getElementById("noImage").onclick = function() {
+    sessionStorage.removeItem("sample");
+    window.location.href= "choose_branch.html";
+  }
 };

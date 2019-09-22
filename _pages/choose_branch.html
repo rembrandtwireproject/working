@@ -13,7 +13,7 @@ layout: default
   <br/><br/>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3" id="your-watermark" style="display:none">
       <div id="sample-title-and-img">
         <span id="sample-title">Your<br/>Watermark</span>
         <br/>
@@ -46,12 +46,19 @@ layout: default
 
 <script src="assets/openseadragon-bin-2.4.0/openseadragon.min.js"></script>
 <script type="text/javascript">
-  OpenSeadragon({
-    id: "openseadragon-your-image",
-    prefixUrl: "assets/openseadragon-bin-2.4.0/images/",
-    tileSources: {
-      type: "image",
-      url: sessionStorage.getItem("sample")
-    }
-  });
+  const sampleImage = sessionStorage.getItem("sample");
+  const elem = document.querySelector("#your-watermark");
+  if (sampleImage) {
+    OpenSeadragon({
+      id: "openseadragon-your-image",
+      prefixUrl: "assets/openseadragon-bin-2.4.0/images/",
+      tileSources: {
+        type: "image",
+        url: sampleImage
+      }
+    });
+    elem.style.display = "";
+  } else {
+    elem.parentNode.removeChild(elem);
+  }
 </script>

@@ -29,7 +29,7 @@ arms_of_bristol:
    start: Bisected_Of
 
 arms_of_burgundy_and_austria:
-  name: Arms of Burgundy and Austria
+  name: Arms of</br>Burgundy and Austria
   image: aab_demo
   start: sheep_chainline
 
@@ -189,7 +189,7 @@ foolscap_5_pointed_collar:
   start: four_points
 
 foolscap_7_pointed_collar:
-  name: Foolscap with Seven-Pointed Collar
+  name: Foolscap with<br/>Seven-Pointed Collar
   image: archetype
   start: balls_equal
 

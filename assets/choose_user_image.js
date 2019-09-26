@@ -172,7 +172,9 @@ window.onload = function () {
   };
 
   function chooseImage(event) {
-    image.src = event.target.src;
+    // The target source is the thumbnail, but we want the non-thumbnail to crop
+    var thumbnailSrc = event.target.src;
+    image.src = thumbnailSrc.replace(/-thumbnail\.png/, ".png");
 
     cropper.destroy();
     cropper = new Cropper(image, options);

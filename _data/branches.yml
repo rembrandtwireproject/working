@@ -2,11 +2,13 @@
   name: 4HS
   image: archetype
   start: Aa
+  diagram: disabled
 
 anchor:
   name: Anchor
   image: archetype
   start: Aa
+  diagram: disabled
 
 arms_of_amsterdam:
   name: Arms of Amsterdam
@@ -42,6 +44,7 @@ arms_of_england:
   name: Arms of England
   image: archetype
   start: A2a
+  diagram: disabled
 
 arms_of_france:
   name: Arms of France
@@ -52,11 +55,13 @@ arms_of_kyburg:
   name: Arms of Kyburg
   image: archetype
   start: A2a
+  diagram: disabled
 
 arms_of_london:
   name: Arms of London
   image: archetype
   start: Aa
+  diagram: disabled
 
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
@@ -112,6 +117,7 @@ countermark_j:
   name: Countermark 'J'
   image: archetype
   start: JBa
+  diagram: disabled
 
 countermark_l:
   name: Countermark 'L'
@@ -132,6 +138,7 @@ countermark_o:
   name: Countermark 'O'
   image: archetype
   start: OMa
+  diagram: disabled
 
 countermark_p:
   name: Countermark 'P'
@@ -172,6 +179,7 @@ dovecote:
   name: Dovecote
   image: archetype
   start: Aa
+  diagram: disabled
 
 eagle:
   name: Eagle
@@ -222,6 +230,7 @@ kings_head:
   name: King’s Head
   image: archetype
   start: Aa
+  diagram: disabled
 
 lion:
   name: Lion
@@ -251,6 +260,7 @@ pot:
   name: Pot
   image: pot
   start: Aa
+  diagram: disabled
 
 pro_patria:
   name: Pro Patria
@@ -286,6 +296,7 @@ wheel:
   name: Wheel
   image: archetype
   start: Aa
+  diagram: disabled
 
 words:
   name: Words

@@ -282,6 +282,7 @@ star:
   name: Star
   image: star
   start: starAb
+  diagram: disabled
 
 strasbourg_bend:
   name: Strasbourg Bend

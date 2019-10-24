@@ -235,6 +235,7 @@ kings_head:
 lion:
   name: Lion
   image: lion
+  start: wings
 
 man:
   name: Man

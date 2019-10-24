@@ -280,7 +280,7 @@ seven_provinces:
 star:
   name: Star
   image: star
-  start:
+  start: starAb
 
 strasbourg_bend:
   name: Strasbourg Bend

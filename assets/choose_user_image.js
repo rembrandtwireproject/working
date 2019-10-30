@@ -106,7 +106,12 @@ window.onload = function () {
             fillColor: '#fff',
             imageSmoothingQuality: 'high',
           }).toDataURL();
-          sessionStorage.setItem("sample",dataURL);
+          try {
+            sessionStorage.setItem("sample",dataURL);
+          } catch (err) {
+            alert("The image you have chosen is too large to fit in memory.  Either choose a smaller or less detailed image, or zoom in to a smaller area.");
+            break;
+          }
 
           window.location.href= "choose_branch.html";
           break;

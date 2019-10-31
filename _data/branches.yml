@@ -299,7 +299,3 @@ wheel:
   image: archetype
   start: Aa
   diagram: disabled
-
-words:
-  name: Words
-  image: words

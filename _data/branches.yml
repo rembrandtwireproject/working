@@ -286,7 +286,3 @@ wheel:
   name: Wheel
   image: archetype
   start: Aa
-
-words:
-  name: Words
-  image: words

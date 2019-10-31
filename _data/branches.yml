@@ -171,10 +171,6 @@ Lorraine_Cross:
   image: LorraineA.a.b
   start: LorrainQuestion1
 
-crown:
-  name: Crown with a<br/>Cross
-  image: crown
-
 dovecote:
   name: Dovecote
   image: archetype

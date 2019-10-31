@@ -2,11 +2,13 @@
   name: 4HS
   image: archetype
   start: Aa
+  diagram: disabled
 
 anchor:
   name: Anchor
   image: archetype
   start: Aa
+  diagram: disabled
 
 arms_of_amsterdam:
   name: Arms of Amsterdam
@@ -29,7 +31,7 @@ arms_of_bristol:
    start: Bisected_Of
 
 arms_of_burgundy_and_austria:
-  name: Arms of Burgundy and Austria
+  name: Arms of</br>Burgundy and Austria
   image: aab_demo
   start: sheep_chainline
 
@@ -42,6 +44,7 @@ arms_of_england:
   name: Arms of England
   image: archetype
   start: A2a
+  diagram: disabled
 
 arms_of_france:
   name: Arms of France
@@ -52,11 +55,13 @@ arms_of_kyburg:
   name: Arms of Kyburg
   image: archetype
   start: A2a
+  diagram: disabled
 
 arms_of_london:
   name: Arms of London
   image: archetype
   start: Aa
+  diagram: disabled
 
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
@@ -112,6 +117,7 @@ countermark_j:
   name: Countermark 'J'
   image: archetype
   start: JBa
+  diagram: disabled
 
 countermark_l:
   name: Countermark 'L'
@@ -132,6 +138,7 @@ countermark_o:
   name: Countermark 'O'
   image: archetype
   start: OMa
+  diagram: disabled
 
 countermark_p:
   name: Countermark 'P'
@@ -172,6 +179,7 @@ dovecote:
   name: Dovecote
   image: archetype
   start: Aa
+  diagram: disabled
 
 eagle:
   name: Eagle
@@ -189,7 +197,7 @@ foolscap_5_pointed_collar:
   start: four_points
 
 foolscap_7_pointed_collar:
-  name: Foolscap with Seven-Pointed Collar
+  name: Foolscap with<br/>Seven-Pointed Collar
   image: archetype
   start: balls_equal
 
@@ -222,10 +230,12 @@ kings_head:
   name: King’s Head
   image: archetype
   start: Aa
+  diagram: disabled
 
 lion:
   name: Lion
   image: lion
+  start: wings
 
 man:
   name: Man
@@ -251,6 +261,7 @@ pot:
   name: Pot
   image: pot
   start: Aa
+  diagram: disabled
 
 pro_patria:
   name: Pro Patria
@@ -270,7 +281,8 @@ seven_provinces:
 star:
   name: Star
   image: star
-  start:
+  start: starAb
+  diagram: disabled
 
 strasbourg_bend:
   name: Strasbourg Bend
@@ -286,3 +298,8 @@ wheel:
   name: Wheel
   image: archetype
   start: Aa
+  diagram: disabled
+
+words:
+  name: Words
+  image: words

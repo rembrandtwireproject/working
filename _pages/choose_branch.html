@@ -13,11 +13,11 @@ layout: default
   <br/><br/>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3" id="your-watermark" style="display:none">
       <div id="sample-title-and-img">
         <span id="sample-title">Your<br/>Watermark</span>
         <br/>
-        <img id="sampleImage">
+        <div id="openseadragon-your-image" style="width: 400px; height: 600px;"></div>
       </div>
     </div>
 
@@ -30,10 +30,10 @@ layout: default
             <figure>
               {% if branch[1].start %}
                 <a href="{{ site.baseurl }}/{{ branch[0] }}/{{ branch[1].start }}.html">
-                  <img src="{{ site.baseurl }}/{{ branch[0] }}/images/archetype.png" class="active">
+                  <img src="{{ site.baseurl }}/{{ branch[0] }}/images/archetype-thumbnail.png" class="active">
                 </a>
               {% else %}
-                <img src="{{ site.baseurl }}/{{ branch[0] }}/images/archetype.png" class="inactive">
+                <img src="{{ site.baseurl }}/{{ branch[0] }}/images/archetype-thumbnail.png" class="inactive">
               {% endif %}
               <figcaption>{{ branch[1].name }}</figcaption>
             </figure>
@@ -44,8 +44,21 @@ layout: default
   </div>
 </div>
 
-<script>
+<script src="assets/openseadragon-bin-2.4.0/openseadragon.min.js"></script>
+<script type="text/javascript">
   const sampleImage = sessionStorage.getItem("sample");
-  const sampleImageTag = $("#sampleImage")[0];
-  sampleImageTag.src = sampleImage;
+  const elem = document.querySelector("#your-watermark");
+  if (sampleImage) {
+    OpenSeadragon({
+      id: "openseadragon-your-image",
+      prefixUrl: "assets/openseadragon-bin-2.4.0/images/",
+      tileSources: {
+        type: "image",
+        url: sampleImage
+      }
+    });
+    elem.style.display = "";
+  } else {
+    elem.parentNode.removeChild(elem);
+  }
 </script>

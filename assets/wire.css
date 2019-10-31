@@ -325,3 +325,27 @@ glossary {
 #openseadragon-reference-image {
   border: 5px solid black;
 }
+
+.question-grid-container {
+  display: grid;
+  grid-template-columns: auto 425px auto;
+  justify-content: center;
+}
+.your-image-panel {
+  grid-column-start: 1;
+}
+.reference-image-panel {
+  grid-column-start: 2;
+}
+.question-panel {
+  grid-column-start: 3;
+}
+
+.watermark-grid-container {
+  display: grid;
+  grid-template-columns: auto 425px auto;
+  justify-content: center;
+}
+.answer-panel {
+  grid-column-start: 3;
+}

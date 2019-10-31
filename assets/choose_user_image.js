@@ -16,7 +16,6 @@ window.onload = function () {
   var dataScaleX = document.getElementById('dataScaleX');
   var dataScaleY = document.getElementById('dataScaleY');
   var options = {
-    aspectRatio: 0.6,
     crop: function (e) {
       var data = e.detail;
 
@@ -32,8 +31,6 @@ window.onload = function () {
   };
   var cropper = new Cropper(image, options);
   var originalImageURL = image.src;
-  var uploadedImageType = 'image/jpeg';
-  var uploadedImageName = 'cropped.jpg';
   var uploadedImageURL;
 
   // Tooltip
@@ -104,12 +101,17 @@ window.onload = function () {
 
         case 'save':
           var dataURL = cropper.getCroppedCanvas({
-            width: 180,
-            height: 300,
+            // width: 180,
+            // height: 300,
             fillColor: '#fff',
             imageSmoothingQuality: 'high',
           }).toDataURL();
-          sessionStorage.setItem("sample",dataURL);
+          try {
+            sessionStorage.setItem("sample",dataURL);
+          } catch (err) {
+            alert("The image you have chosen is too large to fit in memory.  Either choose a smaller or less detailed image, or zoom in to a smaller area.");
+            break;
+          }
 
           window.location.href= "choose_branch.html";
           break;
@@ -160,9 +162,6 @@ window.onload = function () {
       file = files[0];
 
       if (/^image\/\w+/.test(file.type)) {
-        uploadedImageType = file.type;
-        uploadedImageName = file.name;
-
         if (uploadedImageURL) {
           URL.revokeObjectURL(uploadedImageURL);
         }
@@ -178,7 +177,9 @@ window.onload = function () {
   };
 
   function chooseImage(event) {
-    image.src = event.target.src;
+    // The target source is the thumbnail, but we want the non-thumbnail to crop
+    var thumbnailSrc = event.target.src;
+    image.src = thumbnailSrc.replace(/-thumbnail\.png/, ".png");
 
     cropper.destroy();
     cropper = new Cropper(image, options);
@@ -200,5 +201,9 @@ window.onload = function () {
 
   for (var sampleImage of document.querySelectorAll('.chooseYourWatermarkButton figure img')) {
     sampleImage.onclick = chooseImage;
+  }
+  this.document.getElementById("noImage").onclick = function() {
+    sessionStorage.removeItem("sample");
+    window.location.href= "choose_branch.html";
   }
 };

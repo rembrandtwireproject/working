@@ -115,7 +115,8 @@ layout: branch
       {% endfor %}
       <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px"/>
     </div>
-    {% else %}
+    <!-- Change this to page.prints to enable end notes-->
+    {% elsif false %}
       <div class="end-result-examples-prefix">
         The watermark can be found on the following print(s):
       </div>
@@ -143,6 +144,15 @@ layout: branch
           <div class="col-md-2"></div>
         </div>
       </div>
+    {% else %}
+    <p>In future, this correct watermark answer will be accompanied by examples of other prints found
+    on this same paper batch, citing previous scholarship and new WIRE project research.</p>
+
+    <p>In the meantime, researchers can access such information in
+      <a href="https://www.hollstein.com/rembrandt-as-an-etcher-the-practice-of-production-and-distribution-3-parts.html">
+        this print publication.
+      </a>
+    </p>
     {% endif %}
 
     <center>

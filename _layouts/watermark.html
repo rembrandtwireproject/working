@@ -115,6 +115,34 @@ layout: branch
       {% endfor %}
       <img src="../assets/arrow-pointing-to-right-in-a-circle-svgrepo-com.svg" height="62px"/>
     </div>
+    {% else %}
+      <div class="end-result-examples-prefix">
+        The watermark can be found on the following print(s):
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+
+          <div class="col-md-8">
+            <ul>
+              {% for prnt in page.prints %}
+              <li>
+                <i>{{ prnt.title }}</i>, {{ prnt.details }}.
+                {% if prnt.notes %}
+                  <p><strong>NOTE:</strong> {{ prnt.notes }}</p>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+            {% if page.hinterding %}
+              <p>(Erik Hinterding, <i>Rembrandt as an Etcher</i>, 2006, II, {{ page.hinterding }})</p>
+            {% endif %}
+          </div>
+
+          <div class="col-md-2"></div>
+        </div>
+      </div>
     {% endif %}
 
     <center>

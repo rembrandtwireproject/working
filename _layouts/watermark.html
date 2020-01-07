@@ -68,9 +68,14 @@ layout: branch
       {% endif %}
     </div>
 
-    <a class="btn btn-primary btn-upload" href="mailto:Andrew Weislogel <aw27@cornell.edu>">
+    <a class="btn btn-primary btn-upload" onclick="$('#not-your-watermark').show();">
       Not Your Watermark?
     </a>
+    <div id="not-your-watermark" style="display:none">
+      Thank you for using the WIRE watermark identification tool! It is possible that your watermark is a previously unidentified variant.
+      Please email a photo of it to Andy Weislogel at aw27@cornell.edu and we will confirm as best we are able.
+      <hr/>
+    </div>
 
     {% if page.examples %}
     <div class="end-result-examples-prefix" style="margin-bottom:10px;font-family:Avenir;text-transform:uppercase;font-size:16pt; letter-spacing:5pt;font-weight:bolder;">

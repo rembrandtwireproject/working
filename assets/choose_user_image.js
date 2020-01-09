@@ -107,6 +107,7 @@ window.onload = function () {
           try {
             sessionStorage.setItem("sample",dataURL);
           } catch (err) {
+            console.log(err);
             alert("The image you have chosen is too large to fit in memory.  Either choose a smaller or less detailed image, or zoom in to a smaller area.");
             break;
           }

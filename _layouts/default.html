@@ -64,7 +64,12 @@
     </nav>
     {{ content }}
     <div class= "container-fluid footer">
-      <p style="color:white;">Herbert F. Johnson Museum of Art, Cornell University</p>
+      <p style="color:white;">
+        Herbert F. Johnson Museum of Art, Cornell University<br/>
+        {% if page.path != "_pages/index.html" %}
+        Unless otherwise indicated, all watermark images courtesy of Sound & Vision Publishers BV
+        {% endif %}
+      </p>
     </div>
   </body>
 </html>

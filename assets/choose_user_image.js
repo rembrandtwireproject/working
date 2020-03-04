@@ -101,14 +101,13 @@ window.onload = function () {
 
         case 'save':
           var dataURL = cropper.getCroppedCanvas({
-            // width: 180,
-            // height: 300,
             fillColor: '#fff',
             imageSmoothingQuality: 'high',
           }).toDataURL();
           try {
             sessionStorage.setItem("sample",dataURL);
           } catch (err) {
+            console.log(err);
             alert("The image you have chosen is too large to fit in memory.  Either choose a smaller or less detailed image, or zoom in to a smaller area.");
             break;
           }
@@ -170,6 +169,7 @@ window.onload = function () {
         cropper.destroy();
         cropper = new Cropper(image, options);
         inputImage.value = null;
+        document.getElementById("save-button").scrollIntoView();
       } else {
         window.alert('Please choose an image file.');
       }
@@ -190,13 +190,14 @@ window.onload = function () {
     var inMemoryImage = new Image();
     inMemoryImage.src = event.target.src;
     inMemoryImage.onload = function() {
-      console.log("Setting canvas height to "+inMemoryImage.naturalHeight /* +200 */);
       canvas.width = inMemoryImage.naturalWidth;
-      canvas.height = inMemoryImage.naturalHeight/* + 200 */;
+      canvas.height = inMemoryImage.naturalHeight;
       ctx.drawImage(inMemoryImage, 0, 0);
       var dataURL = canvas.toDataURL();
       sessionStorage.setItem("sample",dataURL);
     };
+
+    document.getElementById("save-button").scrollIntoView();
   }
 
   for (var sampleImage of document.querySelectorAll('.chooseYourWatermarkButton figure img')) {

@@ -1,0 +1,1 @@
+rsync -va working/ test/ --exclude .git --exclude vendor --exclude _site

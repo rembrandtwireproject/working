@@ -163,7 +163,7 @@ countermark_w:
 
 countermark_y:
   name: Countermark 'Y'
-  image: YaYbfragment
+  image: y
   start: fragment
 
 Small_Crosses:

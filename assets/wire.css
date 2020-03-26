@@ -200,8 +200,8 @@ h2 {
 }
 
 .watermarkButton img.active {
-  height: 200px;
-  width: 120px;
+  height: 400px;
+  width: 240px;
   border-radius: 25px;
   transition: transform .2s; /* Animation */
 }
@@ -212,8 +212,8 @@ h2 {
 }
 
 .watermarkButton img.inactive {
-  height: 200px;
-  width: 120px;
+  height: 400px;
+  width: 240px;
   border-radius: 25px;
   opacity: 0.5;
 }

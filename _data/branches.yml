@@ -75,7 +75,7 @@ arms_of_wurttemberg:
 
 basel_crosier:
   name: Basel Crosier
-  image: baselcrosierSASKIA
+  image: archetype
   start: basel_q1
 
 basilisk:

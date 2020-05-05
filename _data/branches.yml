@@ -75,7 +75,7 @@ arms_of_wurttemberg:
 
 basel_crosier:
   name: Basel Crosier
-  image: option_Aaa
+  image: archetype
   start: basel_q1
 
 basilisk:
@@ -160,6 +160,11 @@ countermark_w:
   name: Countermark 'W'
   image: archetype
   start: chainline_bisect_w
+
+countermark_y:
+  name: Countermark 'Y'
+  image: y
+  start: fragment
 
 Small_Crosses:
   name: Cross

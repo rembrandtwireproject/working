@@ -12,7 +12,7 @@ anchor:
 
 arms_of_amsterdam:
   name: Arms of Amsterdam
-  image: arms_of_amsterdam
+  image: archetype
   start: feathers_q1
 
 arms_of_baden_hochberg:
@@ -22,7 +22,7 @@ arms_of_baden_hochberg:
 
 arms_of_bern:
   name: Arms of Bern
-  image: first_image
+  image: archetype
   start: edgescrolls
 
 arms_of_bristol:
@@ -32,12 +32,12 @@ arms_of_bristol:
 
 arms_of_burgundy_and_austria:
   name: Arms of</br>Burgundy and Austria
-  image: aab_demo
+  image: archetype
   start: sheep_chainline
 
 arms_of_colbert:
   name: Arms of Colbert
-  image: aaa_demo
+  image: archetype
   start: crown_past_chainline
 
 arms_of_england:
@@ -65,12 +65,12 @@ arms_of_london:
 
 arms_of_ravensburg:
   name: Arms of <br/>Ravensburg
-  image: Ab
+  image: archetype
   start: shield_BM
 
 arms_of_wurttemberg:
   name: Arms of<br/>Württemberg
-  image: Wurttemberg_cover_image
+  image: archetype
   start: letters_below_crest_q1
 
 basel_crosier:
@@ -80,12 +80,12 @@ basel_crosier:
 
 basilisk:
   name: Basilisk
-  image: A2aa
+  image: archetype
   start: chainline_vertical
 
 countermark_a:
   name: Countermark 'A'
-  image: image1
+  image: archetype
   start: three_letters
 
 countermark_d:
@@ -95,12 +95,12 @@ countermark_d:
 
 countermark_f:
   name: Countermark 'F'
-  image: option_d
+  image: archetype
   start: c_follows_q1
 
 countermark_g:
   name: Countermark 'G'
-  image: CNTRMRK-GR2-a
+  image: archetype
   start: chain_line
 
 countermark_h:
@@ -110,7 +110,7 @@ countermark_h:
 
 countermark_i:
   name: Countermark 'I'
-  image:
+  image: archetype
   start: letters_BDR
 
 countermark_j:
@@ -121,7 +121,7 @@ countermark_j:
 
 countermark_l:
   name: Countermark 'L'
-  image: cntr_l_example
+  image: archetype
   start: followedby_b
 
 countermark_m:
@@ -131,7 +131,7 @@ countermark_m:
 
 countermark_n:
   name: Countermark 'N'
-  image: countermark_n_option_a
+  image: archetype
   start: countermark_n_question_1
 
 countermark_o:
@@ -142,18 +142,18 @@ countermark_o:
 
 countermark_p:
   name: Countermark 'P'
-  image:
+  image: archetype
   start: chain_line_mid
 
 countermark_r:
   name: Countermark 'R'
-  image: Rab
+  image: archetype
   start: letter_next_R
 
 
 countermark_v:
   name: Countermark 'V'
-  image: image1
+  image: archetype
   start: double_wired
 
 countermark_w:
@@ -163,17 +163,17 @@ countermark_w:
 
 countermark_y:
   name: Countermark 'Y'
-  image: y
+  image: archetype
   start: fragment
 
 Small_Crosses:
   name: Cross
-  image: CrossesA.a.b
+  image: archetype
   start: CrossesSmallCircle
 
 Lorraine_Cross:
   name: Cross of Lorraine
-  image: LorraineA.a.b
+  image: archetype
   start: LorrainQuestion1
 
 dovecote:
@@ -184,17 +184,17 @@ dovecote:
 
 eagle:
   name: Eagle
-  image: eagle
+  image: archetype
   start: two_heads
 
 fleur_de_lis:
   name: Fleur-de-lis
-  image: fleur_example
+  image: archetype
   start: divided_line
 
 foolscap_5_pointed_collar:
   name: Foolscap with<br/>Five-Pointed Collar
-  image: option_a
+  image: archetype
   start: four_points
 
 foolscap_7_pointed_collar:
@@ -214,17 +214,17 @@ hare:
 
 horse_and_rider:
   name: Horse and Rider
-  image: horse_and_rider
+  image: archetype
   start: extend_past_belly
 
 IHP:
   name: IHP
-  image: IHPA.a.a
+  image: archetype
   start: IHPperpques
 
 IHS:
   name: IHS
-  image: Example1
+  image: archetype
   start: any_following_true
 
 kings_head:
@@ -235,12 +235,12 @@ kings_head:
 
 lion:
   name: Lion
-  image: lion
+  image: archetype
   start: wings
 
 man:
   name: Man
-  image: ManA.a
+  image: archetype
   start: ManQuestion
 
 paschal_lamb:
@@ -250,49 +250,49 @@ paschal_lamb:
 
 phoenix:
   name: Phoenix
-  image: phoenix
+  image: archetype
   start: wings_downward
 
 posthorn:
   name: Posthorn
-  image: posthorn
+  image: archetype
   start: centerline
 
 pot:
   name: Pot
-  image: pot
+  image: archetype
   start: Aa
   diagram: disabled
 
 pro_patria:
   name: Pro Patria
-  image: pro_patria
+  image: archetype
   start: chainline_staff_hat
 
 serpent:
   name: Serpent
-  image: SerpentA.a.a
+  image: archetype
   start: SerpentWindows
 
 seven_provinces:
   name: Seven Provinces
-  image: option_a
+  image: archetype
   start: pointed_tip_q1
 
 star:
   name: Star
-  image: star
+  image: archetype
   start: starAb
   diagram: disabled
 
 strasbourg_bend:
   name: Strasbourg Bend
-  image: Eaa
+  image: archetype
   start: initials_q1
 
 strasbourg_lily:
   name: Strasbourg Lily
-  image: strasbourg_lily
+  image: archetype
   start: crownbands
 
 wheel:

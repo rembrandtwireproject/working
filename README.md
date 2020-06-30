@@ -67,6 +67,25 @@ A series of helpful videos will guide your contributions:
 - Creating a WIRE Question: https://vod.video.cornell.edu/media/1_ljev1tnt
 - Creating a WIRE Watermark: https://vod.video.cornell.edu/media/1_q40jykvd
 
+## Turning off Print Examples
+
+Each Watermark page contains references to the watermark in particular prints.
+This data is copyrighted.  You may control its display in `_layouts/watermark.html`.  To turn
+it on, set line 124 to:
+
+```
+    <!-- Change this to page.prints to enable end notes, false to disable-->
+    {% elsif page.prints %}
+```
+
+And to turn it off:
+
+```
+    <!-- Change this to page.prints to enable end notes, false to disable-->
+    {% elsif false %}
+```
+
+
 ## Contributing to WIRE
 
 You may fork this repository and issue Pull Requests for features you'd like to add.  You can run the site on your own computer by installing Ruby 2.6.3 and

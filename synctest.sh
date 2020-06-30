@@ -1,1 +1,1 @@
-rsync -va working/ test/ --exclude .git --exclude vendor --exclude _site
+rsync -va ./ ../test/ --exclude .git --exclude vendor --exclude _site --exclude _config.yml --exclude .travis.yml

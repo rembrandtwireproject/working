@@ -97,6 +97,8 @@ layout: branch
     OpenSeadragon({
       id: "openseadragon-your-image",
       prefixUrl: "../assets/openseadragon-bin-2.4.0/images/",
+      showRotationControl: true,
+      showFlipControl: true,
       tileSources: {
         type: "image",
         url: sampleImage
@@ -109,6 +111,8 @@ layout: branch
   OpenSeadragon({
     id: "openseadragon-reference-image",
     prefixUrl: "../assets/openseadragon-bin-2.4.0/images/",
+    showRotationControl: true,
+    showFlipControl: true,
     tileSources: {
       type: "image",
       url: "images/{{ slug }}.png"

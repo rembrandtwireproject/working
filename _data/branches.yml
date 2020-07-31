@@ -109,7 +109,7 @@ countermark_h:
   start: p_extend_above
 
 countermark_i:
-  name: Countermark 'I'
+  name: Countermark ' I '
   image: archetype
   start: letters_BDR
 

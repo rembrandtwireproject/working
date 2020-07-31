@@ -161,11 +161,6 @@ countermark_w:
   image: archetype
   start: chainline_bisect_w
 
-countermark_y:
-  name: Countermark 'Y'
-  image: archetype
-  start: fragment
-
 Small_Crosses:
   name: Cross
   image: archetype

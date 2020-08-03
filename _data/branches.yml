@@ -84,27 +84,27 @@ basilisk:
   start: chainline_vertical
 
 countermark_a:
-  name: Countermark 'A'
+  name: Countermark A
   image: archetype
   start: three_letters
 
 countermark_d:
-  name: Countermark 'D'
+  name: Countermark D
   image: archetype
   start: g_next_d
 
 countermark_f:
-  name: Countermark 'F'
+  name: Countermark F
   image: archetype
   start: c_follows_q1
 
 countermark_g:
-  name: Countermark 'G'
+  name: Countermark G
   image: archetype
   start: chain_line
 
 countermark_h:
-  name: Countermark 'H'
+  name: Countermark H
   image: archetype
   start: p_extend_above
 
@@ -114,50 +114,50 @@ countermark_i:
   start: letters_BDR
 
 countermark_j:
-  name: Countermark 'J'
+  name: Countermark J
   image: archetype
   start: JBa
   diagram: disabled
 
 countermark_l:
-  name: Countermark 'L'
+  name: Countermark L
   image: archetype
   start: followedby_b
 
 countermark_m:
-  name: Countermark 'M'
+  name: Countermark M
   image: archetype
   start: four_leaf
 
 countermark_n:
-  name: Countermark 'N'
+  name: Countermark N
   image: archetype
   start: countermark_n_question_1
 
 countermark_o:
-  name: Countermark 'O'
+  name: Countermark O
   image: archetype
   start: OMa
   diagram: disabled
 
 countermark_p:
-  name: Countermark 'P'
+  name: Countermark P
   image: archetype
   start: chain_line_mid
 
 countermark_r:
-  name: Countermark 'R'
+  name: Countermark R
   image: archetype
   start: letter_next_R
 
 
 countermark_v:
-  name: Countermark 'V'
+  name: Countermark V
   image: archetype
   start: double_wired
 
 countermark_w:
-  name: Countermark 'W'
+  name: Countermark W
   image: archetype
   start: chainline_bisect_w
 

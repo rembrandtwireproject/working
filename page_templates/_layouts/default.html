@@ -53,6 +53,13 @@
             <a href="{{ site.baseurl }}/about.html">About</a>
           {% endif %}
         </li>
+        <li>
+          {% if page.path == "_pages/AOVs.html" %}
+            <img src="{{ site.baseurl }}/assets/linkImage.png" height="50px" />
+          {% else %}
+            <a href="{{ site.baseurl }}/about.html">AOVs</a>
+          {% endif %}
+        </li>
       </ul>
     </nav>
     {{ content }}
